@@ -63,7 +63,7 @@ function findRootPath(path) {
 }
 
 function activate(context) {
-  console.log('小程序自定义组件跳转已激活');
+  console.log('minapp-comp-definition is now active!');
   context.subscriptions.push(
     vscode.languages.registerDefinitionProvider(
       [{ scheme: 'file', language: 'wxml', pattern: '**/*.wxml' }],

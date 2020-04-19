@@ -1,0 +1,126 @@
+{
+  "activationEvents": [
+    "onCommand:extension.formatwxml",
+    "onLanguage:wxml"
+  ],
+  "author": "cnyballk <584518260@qq.com> (https://github.com/cnyballk)",
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.formatwxml",
+        "title": "format wxml"
+      }
+    ],
+    "configuration": {
+      "properties": {
+        "wxmlConfig.activeColor": {
+          "default": {
+            "color": "#e5c07b"
+          },
+          "description": "高亮的颜色，可设置每个组件的自定义颜色, [tagName]:color",
+          "type": "object"
+        },
+        "wxmlConfig.activeDisable": {
+          "default": false,
+          "description": "是否禁用高亮组件",
+          "type": "boolean"
+        },
+        "wxmlConfig.format": {
+          "default": {
+            "brace_style": "collapse",
+            "disable_automatic_closing_labels": false,
+            "end_with_newline": false,
+            "indent_char": "",
+            "indent_handlebars": false,
+            "indent_inner_html": false,
+            "indent_scripts": "keep",
+            "indent_size": 2,
+            "indent_with_tabs": true,
+            "max_preserve_newlines": 1,
+            "preserve_newlines": true,
+            "unformatted": "['text']",
+            "wrap_attributes": "force-expand-multiline",
+            "wrap_attributes_count": 4
+          },
+          "description": "wxml格式化的属性。无特殊说明的配置的属性可以这里看https://github.com/beautify-web/js-beautify",
+          "type": "object"
+        },
+        "wxmlConfig.onSaveFormat": {
+          "default": false,
+          "description": "是否开启保存自动格式化",
+          "type": "boolean"
+        },
+        "wxmlConfig.tagNoActiveArr": {
+          "default": [
+            "view",
+            "button",
+            "text",
+            "icon",
+            "image",
+            "navigator",
+            "block",
+            "input",
+            "label",
+            "template",
+            "form",
+            "camera",
+            "textarea"
+          ],
+          "description": "高亮所忽略的组件数组",
+          "type": "array"
+        }
+      },
+      "title": "wxml-vscode"
+    },
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.formatwxml",
+          "group": "navigation",
+          "when": "editorLangId == wxml"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "cny_js_beautify": "^0.0.8"
+  },
+  "description": "微信小程序wxml格式化以及高亮组件(高度自定义)",
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^7.0.43",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.21"
+  },
+  "displayName": "wxml",
+  "engines": {
+    "vscode": "^1.23.0"
+  },
+  "icon": "public/icon.jpg",
+  "keywords": [
+    "wxml",
+    "小程序",
+    "mini",
+    "wechat",
+    "weapp"
+  ],
+  "main": "./dist/extension",
+  "name": "wxml-vscode",
+  "publisher": "cnyballk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cnyballk/wxml-vscode"
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test",
+    "vscode:prepublish": "npm run compile",
+    "watch": "tsc -watch -p ./"
+  },
+  "version": "0.1.2"
+}

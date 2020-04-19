@@ -3,20 +3,14 @@
     "workspaceContains:minapp.cjson",
     "onLanguage:wxml-pug",
     "onLanguage:wxml",
-    "onLanguage:vue",
-    "onCommand:extension.formatwxml"
+    "onLanguage:vue"
   ],
+  "author": "Mora <qiuzhongleiabc@126.com> (https://github.com/qiu8310)",
+  "bugs": "https://github.com/wx-minapp/minapp-vscode/issues",
   "categories": [
-    "Programming Languages",
-    "Other"
+    "Programming Languages"
   ],
   "contributes": {
-    "commands": [
-      {
-        "command": "extension.formatwxml",
-        "title": "format wxml"
-      }
-    ],
     "configuration": {
       "properties": {
         "minapp-vscode.decorateComplexInterpolation": {
@@ -42,7 +36,7 @@
           "type": "boolean"
         },
         "minapp-vscode.disableDecorate": {
-          "default": false,
+          "default": true,
           "description": "禁用模板文件中 js 变量自定义样式的功能",
           "type": "boolean"
         },
@@ -63,9 +57,6 @@
           "type": "number"
         },
         "minapp-vscode.globalStyleFiles": {
-          "default": [
-            "app.wxss"
-          ],
           "description": "全局的样式文件，系统会自动从这些指定的文件中获取 className，用于模板中的 class 补全",
           "items": {
             "type": "string"
@@ -107,13 +98,11 @@
         },
         "minapp-vscode.pugQuoteStyle": {
           "default": "'",
-          "description": "自定义 pug 自动补全时生成的引号",
+          "description": "自定义 pug 自动补全是生成的引号",
           "type": "string"
         },
         "minapp-vscode.reserveTags": {
-          "default": [
-            "text"
-          ],
+          "default": [],
           "description": "格式化时，不处理的标签，即保持标签中的内容和格式化前一模一样，不会出现多余的换行(只针对默认的格式化工具)",
           "items": {
             "type": "string"
@@ -121,7 +110,10 @@
           "type": "array"
         },
         "minapp-vscode.resolveRoots": {
-          "default": [],
+          "default": [
+            "node_modules",
+            "src"
+          ],
           "description": "解析文件引用关系用的根目录",
           "items": {
             "type": "string"
@@ -193,7 +185,7 @@
           "type": "array"
         },
         "minapp-vscode.wxmlFormatter": {
-          "default": "prettyHtml",
+          "default": "wxml",
           "description": "wxml 格式化工具",
           "enum": [
             "wxml",
@@ -206,65 +198,9 @@
           "default": "\"",
           "description": "自定义 wxml 自动补全是生成的引号",
           "type": "string"
-        },
-        "wxmlConfig.activeColor": {
-          "default": {
-            "color": "#e5c07b"
-          },
-          "description": "高亮的颜色，可设置每个组件的自定义颜色, [tagName]:color",
-          "type": "object"
-        },
-        "wxmlConfig.activeDisable": {
-          "default": false,
-          "description": "是否禁用高亮组件",
-          "type": "boolean"
-        },
-        "wxmlConfig.format": {
-          "default": {
-            "brace_style": "collapse",
-            "disable_automatic_closing_labels": true,
-            "end_with_newline": false,
-            "indent_char": "",
-            "indent_handlebars": false,
-            "indent_inner_html": false,
-            "indent_scripts": "keep",
-            "indent_size": 2,
-            "indent_with_tabs": true,
-            "max_preserve_newlines": 1,
-            "preserve_newlines": true,
-            "unformatted": "['text']",
-            "wrap_attributes": "force-expand-multiline",
-            "wrap_attributes_count": 3
-          },
-          "description": "wxml格式化的属性。无特殊说明的配置的属性可以这里看https://github.com/beautify-web/js-beautify",
-          "type": "object"
-        },
-        "wxmlConfig.onSaveFormat": {
-          "default": true,
-          "description": "是否开启保存自动格式化",
-          "type": "boolean"
-        },
-        "wxmlConfig.tagNoActiveArr": {
-          "default": [
-            "view",
-            "button",
-            "text",
-            "icon",
-            "image",
-            "navigator",
-            "block",
-            "input",
-            "label",
-            "template",
-            "form",
-            "camera",
-            "textarea"
-          ],
-          "description": "高亮所忽略的组件数组",
-          "type": "array"
         }
       },
-      "title": "miniprogram-assistant"
+      "title": "minapp-vscode"
     },
     "grammars": [
       {
@@ -273,7 +209,7 @@
           "text.html": "html"
         },
         "language": "wxml",
-        "path": "./extends/qiu8310.minapp-vscode-2.2.2/res/wxml.tmLanguage.json",
+        "path": "./res/wxml.tmLanguage.json",
         "scopeName": "text.html.wxml"
       },
       {
@@ -282,20 +218,20 @@
           "text.html": "html"
         },
         "language": "wxml-pug",
-        "path": "./extends/qiu8310.minapp-vscode-2.2.2/res/wxml-pug.tmLanguage.json",
+        "path": "./res/wxml-pug.tmLanguage.json",
         "scopeName": "text.jade.wxml"
       }
     ],
     "languages": [
       {
-        "configuration": "./extends/qiu8310.minapp-vscode-2.2.2/res/wxml.language-configuration.json",
+        "configuration": "./res/wxml.language-configuration.json",
         "extensions": [
           ".wxml"
         ],
         "id": "wxml"
       },
       {
-        "configuration": "./extends/qiu8310.minapp-vscode-2.2.2/res/wxml-pug.language-configuration.json",
+        "configuration": "./res/wxml-pug.language-configuration.json",
         "extensions": [
           ".wpug",
           ".pug"
@@ -303,46 +239,61 @@
         "id": "wxml-pug"
       }
     ],
-    "menus": {
-      "editor/context": [
-        {
-          "command": "extension.formatwxml",
-          "group": "navigation",
-          "when": "editorLangId == wxml"
-        }
-      ]
+    "themes": []
+  },
+  "dependencies": {
+    "@minapp/common": "^3.0.0",
+    "@minapp/wxml-parser": "^2.1.4",
+    "read-pkg-up": "^6.0.0",
+    "resolve": "^1.11.0",
+    "tslib": "^1.9.0"
+  },
+  "description": "微信小程序标签、属性的智能补全（同时支持原生小程序、mpvue 和 wepy 框架，并提供 snippets）",
+  "devDependencies": {
+    "@serpent/dev-kits": "~0.7.2",
+    "@types/prettier": "~1.16.4",
+    "@types/resolve": "0.0.8",
+    "@types/sass": "~1.16.0",
+    "vscode": "^1.1.21"
+  },
+  "displayName": "minapp",
+  "engines": {
+    "vscode": "^1.19.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": false,
+      "node": true
+    },
+    "extends": [
+      "./node_modules/@serpent/dev-kits/.eslintrc"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "project": "./tsconfig.json",
+      "sourceType": "module"
+    },
+    "rules": {
+      "@typescript-eslint/ban-ts-ignore": "off",
+      "@typescript-eslint/no-parameter-properties": "off"
     }
   },
-  "description": "小程序助手，提升微信小程序开发体验",
-  "devDependencies": {
-    "@types/glob": "^7.1.1",
-    "@types/mocha": "^7.0.2",
-    "@types/node": "^13.11.0",
-    "@types/vscode": "^1.44.0",
-    "cny_js_beautify": "^0.0.8",
-    "eslint": "^6.8.0",
-    "glob": "^7.1.6",
-    "mocha": "^7.1.1",
-    "typescript": "^3.8.3",
-    "vscode-test": "^1.3.0"
-  },
-  "displayName": "小程序助手",
-  "engines": {
-    "vscode": "^1.44.0"
-  },
-  "icon": "./res/icon.png",
+  "eslintIgnore": [
+    "dist",
+    "coverage"
+  ],
+  "homepage": "https://github.com/wx-minapp/minapp-vscode",
+  "icon": "res/icon.png",
   "keywords": [
+    "wxml",
     "小程序",
     "微信",
     "wechat",
-    "wexin",
-    "weapp",
-    "wxml",
-    "mini"
+    "wexin"
   ],
   "license": "MIT",
-  "main": "./extension.js",
-  "name": "miniprogram-assistant",
+  "main": "./dist/extension",
+  "name": "minapp-vscode",
   "optionalDependencies": {
     "prettier": "^1.16.4"
   },
@@ -359,12 +310,20 @@
     "trailingComma": "es5",
     "useTabs": false
   },
-  "publisher": "wjf",
-  "repository": "https://github.com/wjf2016/miniprogram-assistant",
-  "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+  "publisher": "qiu8310",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wx-minapp/minapp-vscode"
   },
-  "version": "0.0.1"
+  "scripts": {
+    "build": "npm run clear && npm run lint && tsc -p ./",
+    "clear": "remove-all dist",
+    "lint": "eslint --ext .ts,.tsx ./src",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run build",
+    "test__": "npm run build && node ./node_modules/vscode/bin/test",
+    "vscode:prepublish": "npm run build",
+    "watch": "tsc -watch -p ./"
+  },
+  "version": "2.2.2"
 }
