@@ -1,5 +1,6 @@
 {
   "activationEvents": [
+    "*",
     "onLanguage:wxml"
   ],
   "categories": [
@@ -22,9 +23,11 @@
   "engines": {
     "vscode": "^1.44.0"
   },
+  "icon": "res/icon.png",
   "main": "./extension.js",
   "name": "miniprogram-assistant",
   "publisher": "wjf",
+  "repository": "https://github.com/wjf2016/miniprogram-assistant",
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
