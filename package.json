@@ -330,7 +330,7 @@
   "engines": {
     "vscode": "^1.44.0"
   },
-  "icon": "./res/icon.png",
+  "icon": "res/icon.png",
   "keywords": [
     "小程序",
     "微信",
