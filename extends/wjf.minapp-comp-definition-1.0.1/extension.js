@@ -1,6 +1,7 @@
-const vscode = require('vscode');
-const fs = require('fs');
-const path = require('path');
+const vscode = require('vscode')
+const fs = require('fs')
+const path = require('path')
+const getProperties = require('./util/get-properties')
 const wxTags = [
   'movable-view',
   'cover-image',
@@ -43,74 +44,85 @@ const wxTags = [
   'official-account',
   'open-data',
   'web-view',
-];
+]
 
-const appFile = 'app.json';
-let rootPath = '';
+const appFile = 'app.json'
+let rootPath = ''
 
 function lastLevelDir(filePath) {
-  return path.dirname(filePath);
+  return path.dirname(filePath)
 }
 
 function findRootPath(path) {
-  const dir = lastLevelDir(path);
-  const files = fs.readdirSync(dir);
+  const dir = lastLevelDir(path)
+  const files = fs.readdirSync(dir)
   if (files.includes(appFile)) {
-    return dir;
+    return dir
   } else {
-    return findRootPath(dir);
+    return findRootPath(dir)
   }
 }
 
 function activate(context) {
-  console.log('minapp-comp-definition is now active!');
+  console.log('minapp-comp-definition is now active!')
   context.subscriptions.push(
-    vscode.languages.registerDefinitionProvider(
-      [{ scheme: 'file', language: 'wxml', pattern: '**/*.wxml' }],
-      {
-        provideDefinition(doc, position) {
-          const lineText = doc.lineAt(position).text;
-          const wordRange = doc.getWordRangeAtPosition(position, /[\w|\-]+\b/);
-          const tag = (lineText.match(/(?<=<\/?)[\w|\-]+\b/) || [])[0];
-          const word = doc.getText(wordRange);
-          if (!tag) {
-            return;
-          }
-          if (tag !== word) {
-            return;
-          }
-          if (wxTags.includes(tag)) {
-            return [];
-          }
-          const filePath = doc.fileName;
-          let jsonFile = filePath.replace('.wxml', '.json');
-          if (!rootPath) {
-            rootPath = findRootPath(filePath);
-          }
-          let config = JSON.parse(fs.readFileSync(jsonFile).toString());
-          let compPath;
+    vscode.languages.registerDefinitionProvider([{ scheme: 'file', language: 'wxml', pattern: '**/*.wxml' }], {
+      provideDefinition(doc, position) {
+        const lineText = doc.lineAt(position).text
+        const wordRange = doc.getWordRangeAtPosition(position, /[\w|\-]+\b/)
+        const tag = (lineText.match(/(?<=<\/?)[\w|\-]+\b/) || [])[0]
+        const word = doc.getText(wordRange)
+
+        console.log(word)
+
+        if (!tag) {
+          return
+        }
+
+        if (tag !== word) {
+          return
+        }
+
+        if (wxTags.includes(tag)) {
+          return []
+        }
+
+        const filePath = doc.fileName
+        let jsonFile = filePath.replace('.wxml', '.json')
+
+        if (!rootPath) {
+          rootPath = findRootPath(filePath)
+        }
+
+        let config = JSON.parse(fs.readFileSync(jsonFile).toString())
+        let compPath
+
+        if (config.usingComponents && config.usingComponents[tag]) {
+          compPath = config.usingComponents[tag]
+        }
+
+        // 页面或者组件没有定义，查找一下全局配置
+        if (!compPath) {
+          jsonFile = path.join(rootPath, appFile)
+          config = JSON.parse(fs.readFileSync(jsonFile).toString())
           if (config.usingComponents && config.usingComponents[tag]) {
-            compPath = config.usingComponents[tag];
+            compPath = config.usingComponents[tag]
           }
-          // 页面或者组件没有定义，查找一下全局配置
-          if (!compPath) {
-            jsonFile = path.join(rootPath, appFile);
-            config = JSON.parse(fs.readFileSync(jsonFile).toString());
-            if (config.usingComponents && config.usingComponents[tag]) {
-              compPath = config.usingComponents[tag];
-            }
-          }
-          const componentPath = path.join(rootPath, `${compPath}.js`);
-          return new vscode.Location(
-            vscode.Uri.file(componentPath),
-            new vscode.Position(0, 0),
-          );
-        },
+        }
+
+        const componentPath = path.join(rootPath, `${compPath}.js`)
+
+        /* getProperties(componentPath).forEach(item => {
+          console.log(item.name)
+          console.log(item.description)
+        }) */
+
+        return new vscode.Location(vscode.Uri.file(componentPath), new vscode.Position(0, 0))
       },
-    ),
-  );
+    })
+  )
 }
 
 module.exports = {
   activate,
-};
+}
