@@ -1,0 +1,1 @@
+package.json文件的devDependencies字段内的依赖不会被打包上传的，不要把扩展运行所必须的依赖放在此字段内
