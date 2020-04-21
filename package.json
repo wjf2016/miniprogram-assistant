@@ -376,5 +376,5 @@
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js"
   },
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
