@@ -298,17 +298,22 @@
     "prettier": "^1.16.4"
   },
   "prettier": {
-    "arrowParens": "avoid",
+    "arrowParens": "always",
     "bracketSpacing": true,
-    "endOfLine": "lf",
+    "endOfLine": "auto",
     "jsxBracketSameLine": false,
-    "jsxSingleQuote": true,
-    "printWidth": 120,
+    "overrides": [
+      {
+        "files": "*.wxs",
+        "options": {
+          "parser": "babel"
+        }
+      }
+    ],
     "semi": false,
     "singleQuote": true,
     "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
+    "trailingComma": "all"
   },
   "publisher": "qiu8310",
   "repository": {

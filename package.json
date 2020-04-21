@@ -313,6 +313,7 @@
       ]
     }
   },
+  "dependencies": {},
   "description": "小程序助手，提升微信小程序开发体验",
   "devDependencies": {
     "@types/glob": "^7.1.1",
@@ -323,6 +324,7 @@
     "eslint": "^6.8.0",
     "glob": "^7.1.6",
     "mocha": "^7.1.1",
+    "recast": "^0.19.0",
     "typescript": "^3.8.3",
     "vscode-test": "^1.3.0"
   },
@@ -347,17 +349,22 @@
     "prettier": "^1.16.4"
   },
   "prettier": {
-    "arrowParens": "avoid",
+    "arrowParens": "always",
     "bracketSpacing": true,
-    "endOfLine": "lf",
+    "endOfLine": "auto",
     "jsxBracketSameLine": false,
-    "jsxSingleQuote": true,
-    "printWidth": 120,
+    "overrides": [
+      {
+        "files": "*.wxs",
+        "options": {
+          "parser": "babel"
+        }
+      }
+    ],
     "semi": false,
     "singleQuote": true,
     "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
+    "trailingComma": "all"
   },
   "publisher": "wjf",
   "repository": "https://github.com/wjf2016/miniprogram-assistant",
@@ -366,8 +373,5 @@
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js"
   },
-  "version": "0.0.1",
-  "dependencies": {
-    "recast": "^0.19.0"
-  }
+  "version": "0.0.2"
 }
