@@ -6,8 +6,6 @@ const documentSelector = [
 ]
 
 function activate(context) {
-  console.log('minapp-comp-definition is now active!')
-
   // 注册跳转到定义
   context.subscriptions.push(
     vscode.languages.registerDefinitionProvider(

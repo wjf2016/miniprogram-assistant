@@ -1,10 +1,13 @@
 {
   "activationEvents": [
+    "workspaceContains:project.config.json",
     "workspaceContains:minapp.cjson",
     "onLanguage:wxml-pug",
     "onLanguage:wxml",
     "onLanguage:vue",
-    "onCommand:extension.formatwxml"
+    "onCommand:extension.formatwxml",
+    "onCommand:miniprogramAssistant.create.page",
+    "onCommand:miniprogramAssistant.create.component"
   ],
   "categories": [
     "Programming Languages",
@@ -13,8 +16,29 @@
   "contributes": {
     "commands": [
       {
+        "category": "miniprogramAssistant",
         "command": "extension.formatwxml",
         "title": "format wxml"
+      },
+      {
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.create.page",
+        "title": "创建小程序页面"
+      },
+      {
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.create.component",
+        "title": "创建小程序组件"
+      },
+      {
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.toCamelCase",
+        "title": "转为驼峰命名"
+      },
+      {
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.toUnderline",
+        "title": "转为下划线命名"
       }
     ],
     "configuration": {
@@ -207,6 +231,16 @@
           "description": "自定义 wxml 自动补全是生成的引号",
           "type": "string"
         },
+        "miniprogramAssistant.create.componentSource": {
+          "default": "",
+          "description": "新建组件时使用的模板来源，路径必须为目录，至少包含index.js、index.wxml、index.wxss、index.json这四个文件",
+          "type": "string"
+        },
+        "miniprogramAssistant.create.pageSource": {
+          "default": "",
+          "description": "新建页面时使用的模板来源，路径必须为目录，至少包含index.js、index.wxml、index.wxss、index.json这四个文件",
+          "type": "string"
+        },
         "wxmlConfig.activeColor": {
           "default": {
             "color": "#e5c07b"
@@ -264,7 +298,7 @@
           "type": "array"
         }
       },
-      "title": "miniprogram-assistant"
+      "title": "小程序助手"
     },
     "grammars": [
       {
@@ -309,6 +343,26 @@
           "command": "extension.formatwxml",
           "group": "navigation",
           "when": "editorLangId == wxml"
+        },
+        {
+          "command": "miniprogramAssistant.toCamelCase",
+          "group": "navigation"
+        },
+        {
+          "command": "miniprogramAssistant.toUnderline",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "miniprogramAssistant.create.page",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder == true"
+        },
+        {
+          "command": "miniprogramAssistant.create.component",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder == true"
         }
       ]
     }
@@ -317,6 +371,7 @@
     "@minapp/common": "^3.0.0",
     "@minapp/wxml-parser": "^2.1.4",
     "cny_js_beautify": "^0.0.8",
+    "fs-extra": "^9.0.0",
     "glob": "^7.1.6",
     "prettier": "^1.16.4",
     "read-pkg-up": "^6.0.0",
@@ -351,24 +406,6 @@
   "license": "MIT",
   "main": "./extension.js",
   "name": "miniprogram-assistant",
-  "prettier": {
-    "arrowParens": "always",
-    "bracketSpacing": true,
-    "endOfLine": "auto",
-    "jsxBracketSameLine": false,
-    "overrides": [
-      {
-        "files": "*.wxs",
-        "options": {
-          "parser": "babel"
-        }
-      }
-    ],
-    "semi": false,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "all"
-  },
   "publisher": "wjf",
   "repository": "https://github.com/wjf2016/miniprogram-assistant",
   "scripts": {
@@ -376,5 +413,5 @@
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js"
   },
-  "version": "0.0.3"
+  "version": "0.0.4"
 }

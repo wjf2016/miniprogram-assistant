@@ -11,7 +11,6 @@ const config_1 = require('./plugin/lib/config')
 const PropDefinitionProvider_1 = require('./plugin/PropDefinitionProvider')
 
 function activate(context) {
-  console.log('minapp-vscode is now active!')
   config_1.configActivate()
   if (!config_1.config.disableAutoConfig) {
     autoConfig()
@@ -21,10 +20,15 @@ function activate(context) {
   const hoverProvider = new HoverProvider_1.default(config_1.config)
   const linkProvider = new LinkProvider_1.default(config_1.config)
   const autoCompletionPug = new PugAutoCompletion_1.default(config_1.config)
-  const autoCompletionVue = new VueAutoCompletion_1.default(autoCompletionPug, autoCompletionWxml)
+  const autoCompletionVue = new VueAutoCompletion_1.default(
+    autoCompletionPug,
+    autoCompletionWxml,
+  )
   const documentHighlight = new WxmlDocumentHighlight_1.default(config_1.config)
-  const propDefinitionProvider = new PropDefinitionProvider_1.PropDefinitionProvider(config_1.config)
-  const wxml = config_1.config.documentSelector.map(l => schemes(l))
+  const propDefinitionProvider = new PropDefinitionProvider_1.PropDefinitionProvider(
+    config_1.config,
+  )
+  const wxml = config_1.config.documentSelector.map((l) => schemes(l))
   const pug = schemes('wxml-pug')
   const vue = schemes('vue')
   const enter = config_1.config.showSuggestionOnEnter ? ['\n'] : []
@@ -32,16 +36,28 @@ function activate(context) {
     // 给模板中的 脚本 添加特殊颜色
     new ActiveTextEditorListener_1.default(config_1.config),
     // hover 效果
-    vscode_1.languages.registerHoverProvider([pug, vue].concat(wxml), hoverProvider),
+    vscode_1.languages.registerHoverProvider(
+      [pug, vue].concat(wxml),
+      hoverProvider,
+    ),
     // 添加 link
-    vscode_1.languages.registerDocumentLinkProvider([pug].concat(wxml), linkProvider),
+    vscode_1.languages.registerDocumentLinkProvider(
+      [pug].concat(wxml),
+      linkProvider,
+    ),
     // 高亮匹配的标签
-    vscode_1.languages.registerDocumentHighlightProvider(wxml, documentHighlight),
+    vscode_1.languages.registerDocumentHighlightProvider(
+      wxml,
+      documentHighlight,
+    ),
     // 格式化
     // vscode_1.languages.registerDocumentFormattingEditProvider(wxml, formatter),
     // vscode_1.languages.registerDocumentRangeFormattingEditProvider(wxml, formatter),
     // DefinitionProvider
-    vscode_1.languages.registerDefinitionProvider([pug].concat(wxml), propDefinitionProvider),
+    vscode_1.languages.registerDefinitionProvider(
+      [pug].concat(wxml),
+      propDefinitionProvider,
+    ),
     // 自动补全
     vscode_1.languages.registerCompletionItemProvider(
       wxml,
@@ -55,7 +71,7 @@ function activate(context) {
       '"',
       "'",
       '/',
-      ...enter
+      ...enter,
     ),
     vscode_1.languages.registerCompletionItemProvider(
       pug,
@@ -68,7 +84,7 @@ function activate(context) {
       '.',
       '-',
       '"',
-      "'"
+      "'",
     ),
     // trigger 需要是上两者的和
     vscode_1.languages.registerCompletionItemProvider(
@@ -82,8 +98,8 @@ function activate(context) {
       '-',
       '(',
       '"',
-      "'"
-    )
+      "'",
+    ),
   )
 }
 
@@ -112,7 +128,7 @@ function autoConfig() {
   updates.forEach(({ key, map }) => {
     let oldMap = c.get(key, {})
     let appendMap = {}
-    Object.keys(map).forEach(k => {
+    Object.keys(map).forEach((k) => {
       if (!oldMap.hasOwnProperty(k)) appendMap[k] = map[k]
     })
     if (Object.keys(appendMap).length) {
