@@ -1,7 +1,9 @@
 {
   "activationEvents": [
+    "*",
     "workspaceContains:project.config.json",
     "workspaceContains:minapp.cjson",
+    "onLanguage:JavaScript",
     "onLanguage:wxml-pug",
     "onLanguage:wxml",
     "onLanguage:vue",
@@ -9,12 +11,41 @@
     "onCommand:miniprogramAssistant.create.page",
     "onCommand:miniprogramAssistant.create.component"
   ],
+  "author": {
+    "email": "wujianfu@foxmail.com",
+    "name": "阿福",
+    "url": "https://github.com/wjf2016"
+  },
+  "bugs": {
+    "email": "wujianfu@foxmail.com",
+    "url": "https://github.com/wjf2016/miniprogram-assistant/issues"
+  },
   "categories": [
     "Programming Languages",
+    "Snippets",
+    "Formatters",
     "Other"
   ],
   "contributes": {
     "commands": [
+      {
+        "category": "MiniProgram",
+        "command": "MiniProgram.commands.npm",
+        "title": "构建"
+      },
+      {
+        "command": "MiniProgram.commands.compile",
+        "title": "编译"
+      },
+      {
+        "command": "MiniProgram.commands.preview",
+        "title": "预览"
+      },
+      {
+        "category": "MiniProgram",
+        "command": "MiniProgram.commands.upload",
+        "title": "上传"
+      },
       {
         "category": "miniprogramAssistant",
         "command": "extension.formatwxml",
@@ -320,6 +351,12 @@
         "scopeName": "text.jade.wxml"
       }
     ],
+    "jsonValidation": [
+      {
+        "fileMatch": "*/app.json",
+        "url": "./validations/app.json"
+      }
+    ],
     "languages": [
       {
         "configuration": "./extends/qiu8310.minapp-vscode-2.2.2/res/wxml.language-configuration.json",
@@ -335,6 +372,26 @@
           ".pug"
         ],
         "id": "wxml-pug"
+      },
+      {
+        "aliases": [
+          "JavaScript",
+          "javascript",
+          "js"
+        ],
+        "extensions": [
+          ".wxs"
+        ],
+        "id": "javascript"
+      },
+      {
+        "aliases": [
+          "CSS"
+        ],
+        "extensions": [
+          ".wxss"
+        ],
+        "id": "css"
       }
     ],
     "menus": {
@@ -365,6 +422,36 @@
           "when": "explorerResourceIsFolder == true"
         }
       ]
+    },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/miniprogram-automator.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/miniprogram-js.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/miniprogram-js.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/miniprogram-json.json"
+      },
+      {
+        "language": "wxml",
+        "path": "./snippets/miniprogram-wxml.json"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "miniprogram-view",
+          "name": "微信小程序"
+        }
+      ]
     }
   },
   "dependencies": {
@@ -372,7 +459,6 @@
     "@minapp/wxml-parser": "^2.1.4",
     "cny_js_beautify": "^0.0.8",
     "fs-extra": "^9.0.0",
-    "glob": "^7.1.6",
     "prettier": "^1.16.4",
     "read-pkg-up": "^6.0.0",
     "recast": "^0.19.0",
@@ -380,38 +466,37 @@
   },
   "description": "小程序助手，提升微信小程序开发体验",
   "devDependencies": {
-    "@types/glob": "^7.1.1",
-    "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
-    "@types/vscode": "^1.44.0",
-    "eslint": "^6.8.0",
-    "mocha": "^7.1.1",
-    "typescript": "^3.8.3",
-    "vscode-test": "^1.3.0"
+    "@types/vscode": "^1.44.0"
   },
   "displayName": "小程序助手",
   "engines": {
-    "vscode": "^1.44.0"
+    "vscode": "^1.44.2"
   },
   "icon": "res/icon.png",
+  "keybindings": [
+    {
+      "command": "MiniProgram.commands.compile",
+      "key": "alt+e",
+      "when": "isWindows"
+    }
+  ],
   "keywords": [
     "小程序",
     "微信",
+    "miniprogram",
     "wechat",
     "wexin",
     "weapp",
     "wxml",
-    "mini"
+    "mini",
+    "mina"
   ],
   "license": "MIT",
   "main": "./extension.js",
   "name": "miniprogram-assistant",
   "publisher": "wjf",
   "repository": "https://github.com/wjf2016/miniprogram-assistant",
-  "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
-  },
-  "version": "0.0.4"
+  "scripts": {},
+  "version": "0.0.5"
 }
