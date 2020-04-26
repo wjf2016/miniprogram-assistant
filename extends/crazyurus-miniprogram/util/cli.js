@@ -43,6 +43,13 @@ function getMiniprogramCliPath(context) {
 function activate(context) {
   // 构建npm
   vscode.commands.registerCommand('MiniProgram.commands.npm', async () => {
+    const projectConfig = getProjectConfig()
+
+    if (!projectConfig) {
+      vscode.window.showErrorMessage('请打开微信小程序项目！')
+      return
+    }
+
     await vscode.window.withProgress(
       {
         title: '正在构建npm',
@@ -72,9 +79,14 @@ function activate(context) {
 
   // 编译
   vscode.commands.registerCommand('MiniProgram.commands.compile', async () => {
-    const miniprogramProjectName = decodeURIComponent(
-      getProjectConfig().projectname,
-    )
+    const projectConfig = getProjectConfig()
+
+    if (!projectConfig) {
+      vscode.window.showErrorMessage('请打开微信小程序项目！')
+      return
+    }
+
+    const miniprogramProjectName = decodeURIComponent(projectConfig.projectname)
     const rootPath = getRootPath()
     const vscodeProjectName = path.basename(rootPath)
     const command = `"${path.join(
@@ -96,6 +108,12 @@ function activate(context) {
   // 预览
   vscode.commands.registerCommand('MiniProgram.commands.preview', async () => {
     const projectConfig = getProjectConfig()
+
+    if (!projectConfig) {
+      vscode.window.showErrorMessage('请打开微信小程序项目！')
+      return
+    }
+
     const tmpDir = path.join(path.dirname(__filename), '../tmp')
     const base64Txt = path.join(tmpDir, `${projectConfig.appid}.txt`)
     const miniprogramCliPath = await getMiniprogramCliPath(context)
@@ -165,6 +183,13 @@ function activate(context) {
 
   // 上传
   vscode.commands.registerCommand('MiniProgram.commands.upload', async () => {
+    const projectConfig = getProjectConfig()
+
+    if (!projectConfig) {
+      vscode.window.showErrorMessage('请打开微信小程序项目！')
+      return
+    }
+
     const previousVersion = context.workspaceState.get('previousVersion')
 
     const version = await vscode.window.showInputBox({
