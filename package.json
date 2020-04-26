@@ -1,12 +1,8 @@
 {
   "activationEvents": [
-    "*",
     "workspaceContains:project.config.json",
-    "workspaceContains:minapp.cjson",
     "onLanguage:JavaScript",
-    "onLanguage:wxml-pug",
     "onLanguage:wxml",
-    "onLanguage:vue",
     "onCommand:extension.formatwxml",
     "onCommand:miniprogramAssistant.create.page",
     "onCommand:miniprogramAssistant.create.component"
