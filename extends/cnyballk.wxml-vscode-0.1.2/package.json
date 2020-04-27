@@ -1,6 +1,6 @@
 {
   "activationEvents": [
-    "onCommand:extension.formatwxml",
+    "onCommand:miniprogramAssistant.formatWxml",
     "onLanguage:wxml"
   ],
   "author": "cnyballk <584518260@qq.com> (https://github.com/cnyballk)",
@@ -10,7 +10,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.formatwxml",
+        "command": "miniprogramAssistant.formatWxml",
         "title": "format wxml"
       }
     ],
@@ -78,7 +78,7 @@
     "menus": {
       "editor/context": [
         {
-          "command": "extension.formatwxml",
+          "command": "miniprogramAssistant.formatWxml",
           "group": "navigation",
           "when": "editorLangId == wxml"
         }

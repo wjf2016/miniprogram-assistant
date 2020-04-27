@@ -13,7 +13,7 @@ function activate(context) {
     saveFormat_1.default(wxml)
   })
   context.subscriptions.push(activeText)
-  vscode_1.commands.registerCommand('extension.formatwxml', () => {
+  vscode_1.commands.registerCommand('miniprogramAssistant.formatWxml', () => {
     wxml.init()
   })
 }

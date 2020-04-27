@@ -42,7 +42,7 @@ function getMiniprogramCliPath(context) {
 
 function activate(context) {
   // 构建npm
-  vscode.commands.registerCommand('MiniProgram.commands.npm', async () => {
+  vscode.commands.registerCommand('miniprogramAssistant.npm', async () => {
     const projectConfig = getProjectConfig()
 
     if (!projectConfig) {
@@ -78,7 +78,7 @@ function activate(context) {
   })
 
   // 编译
-  vscode.commands.registerCommand('MiniProgram.commands.compile', async () => {
+  vscode.commands.registerCommand('miniprogramAssistant.compile', async () => {
     const projectConfig = getProjectConfig()
 
     if (!projectConfig) {
@@ -106,7 +106,7 @@ function activate(context) {
   })
 
   // 预览
-  vscode.commands.registerCommand('MiniProgram.commands.preview', async () => {
+  vscode.commands.registerCommand('miniprogramAssistant.preview', async () => {
     const projectConfig = getProjectConfig()
 
     if (!projectConfig) {
@@ -182,7 +182,7 @@ function activate(context) {
   })
 
   // 上传
-  vscode.commands.registerCommand('MiniProgram.commands.upload', async () => {
+  vscode.commands.registerCommand('miniprogramAssistant.upload', async () => {
     const projectConfig = getProjectConfig()
 
     if (!projectConfig) {

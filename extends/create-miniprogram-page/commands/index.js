@@ -44,11 +44,11 @@ const createPage = function(type, url) {
   if (type === 'page') {
     pageSource = vscode.workspace
       .getConfiguration()
-      .get('miniprogramAssistant.create.pageSource')
+      .get('miniprogramAssistant.createPageSource')
   } else {
     pageSource = vscode.workspace
       .getConfiguration()
-      .get('miniprogramAssistant.create.componentSource')
+      .get('miniprogramAssistant.createComponentSource')
   }
 
   // 目录不存在时，使用默认模板

@@ -1,11 +1,20 @@
 {
   "activationEvents": [
     "workspaceContains:project.config.json",
+    "workspaceContains:app.json",
     "onLanguage:JavaScript",
     "onLanguage:wxml",
-    "onCommand:extension.formatwxml",
-    "onCommand:miniprogramAssistant.create.page",
-    "onCommand:miniprogramAssistant.create.component"
+    "onLanguage:JSON",
+    "onLanguage:CSS",
+    "onCommand:miniprogramAssistant.npm",
+    "onCommand:miniprogramAssistant.compile",
+    "onCommand:miniprogramAssistant.preview",
+    "onCommand:miniprogramAssistant.upload",
+    "onCommand:miniprogramAssistant.formatWxml",
+    "onCommand:miniprogramAssistant.createPage",
+    "onCommand:miniprogramAssistant.createComponent",
+    "onCommand:miniprogramAssistant.toCamelCase",
+    "onCommand:miniprogramAssistant.toUnderline"
   ],
   "author": {
     "email": "wujianfu@foxmail.com",
@@ -23,44 +32,40 @@
     "Other"
   ],
   "contributes": {
-    "keybindings": [
-      {
-        "command": "MiniProgram.commands.compile",
-        "key": "alt+e"
-      }
-    ],
     "commands": [
       {
-        "category": "MiniProgram",
-        "command": "MiniProgram.commands.npm",
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.npm",
         "title": "构建"
       },
       {
-        "command": "MiniProgram.commands.compile",
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.compile",
         "title": "编译"
       },
       {
-        "command": "MiniProgram.commands.preview",
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.preview",
         "title": "预览"
       },
       {
-        "category": "MiniProgram",
-        "command": "MiniProgram.commands.upload",
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.upload",
         "title": "上传"
       },
       {
         "category": "miniprogramAssistant",
-        "command": "extension.formatwxml",
+        "command": "miniprogramAssistant.formatWxml",
         "title": "format wxml"
       },
       {
         "category": "miniprogramAssistant",
-        "command": "miniprogramAssistant.create.page",
+        "command": "miniprogramAssistant.createPage",
         "title": "创建小程序页面"
       },
       {
         "category": "miniprogramAssistant",
-        "command": "miniprogramAssistant.create.component",
+        "command": "miniprogramAssistant.createComponent",
         "title": "创建小程序组件"
       },
       {
@@ -264,12 +269,12 @@
           "description": "自定义 wxml 自动补全是生成的引号",
           "type": "string"
         },
-        "miniprogramAssistant.create.componentSource": {
+        "miniprogramAssistant.createComponentSource": {
           "default": "",
           "description": "新建组件时使用的模板来源，路径必须为目录，至少包含index.js、index.wxml、index.wxss、index.json这四个文件",
           "type": "string"
         },
-        "miniprogramAssistant.create.pageSource": {
+        "miniprogramAssistant.createPageSource": {
           "default": "",
           "description": "新建页面时使用的模板来源，路径必须为目录，至少包含index.js、index.wxml、index.wxss、index.json这四个文件",
           "type": "string"
@@ -359,6 +364,12 @@
         "url": "./validations/app.json"
       }
     ],
+    "keybindings": [
+      {
+        "command": "miniprogramAssistant.compile",
+        "key": "ctrl+q"
+      }
+    ],
     "languages": [
       {
         "configuration": "./extends/qiu8310.minapp-vscode-2.2.2/res/wxml.language-configuration.json",
@@ -399,7 +410,7 @@
     "menus": {
       "editor/context": [
         {
-          "command": "extension.formatwxml",
+          "command": "miniprogramAssistant.formatWxml",
           "group": "navigation",
           "when": "editorLangId == wxml"
         },
@@ -414,12 +425,12 @@
       ],
       "explorer/context": [
         {
-          "command": "miniprogramAssistant.create.page",
+          "command": "miniprogramAssistant.createPage",
           "group": "navigation",
           "when": "explorerResourceIsFolder == true"
         },
         {
-          "command": "miniprogramAssistant.create.component",
+          "command": "miniprogramAssistant.createComponent",
           "group": "navigation",
           "when": "explorerResourceIsFolder == true"
         }
@@ -493,5 +504,5 @@
   "publisher": "wjf",
   "repository": "https://github.com/wjf2016/miniprogram-assistant",
   "scripts": {},
-  "version": "0.0.9"
+  "version": "0.1.0"
 }

@@ -5,19 +5,19 @@ class TreeDataProvider {
     if (!element) {
       return [
         {
-          command: 'MiniProgram.commands.npm',
+          command: 'miniprogramAssistant.npm',
           title: '构建',
         },
         {
-          command: 'MiniProgram.commands.compile',
+          command: 'miniprogramAssistant.compile',
           title: '编译',
         },
         {
-          command: 'MiniProgram.commands.preview',
+          command: 'miniprogramAssistant.preview',
           title: '预览',
         },
         {
-          command: 'MiniProgram.commands.upload',
+          command: 'miniprogramAssistant.upload',
           title: '上传',
         },
       ]
