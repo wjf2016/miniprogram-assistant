@@ -446,10 +446,6 @@
         "path": "./snippets/miniprogram-js.json"
       },
       {
-        "language": "typescript",
-        "path": "./snippets/miniprogram-js.json"
-      },
-      {
         "language": "json",
         "path": "./snippets/miniprogram-json.json"
       },
@@ -504,5 +500,5 @@
   "publisher": "wjf",
   "repository": "https://github.com/wjf2016/miniprogram-assistant",
   "scripts": {},
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

@@ -1,293 +1,187 @@
 {
   "automator.connect": {
     "prefix": "automator.connect",
-    "body": [
-      "automator.connect({",
-      "  wxEndpoint: '${1}'",
-      "});"
-    ]
+    "body": ["automator.connect({", "  wxEndpoint: '${1}'", "});"]
   },
   "automator.launch": {
     "prefix": "automator.launch",
-    "body": [
-      "automator.launch({",
-      "  projectPath: '${1}'",
-      "});"
-    ]
+    "body": ["automator.launch({", "  projectPath: '${1}'", "});"]
   },
   "miniProgram.pageStack": {
     "prefix": "miniProgram.pageStack",
-    "body": [
-      "miniProgram.pageStack()"
-    ]
+    "body": ["miniProgram.pageStack()"]
   },
   "miniProgram.navigateTo": {
     "prefix": "miniProgram.navigateTo",
-    "body": [
-      "miniProgram.navigateTo('${1}')"
-    ]
+    "body": ["miniProgram.navigateTo('${1}')"]
   },
   "miniProgram.redirectTo": {
     "prefix": "miniProgram.redirectTo",
-    "body": [
-      "miniProgram.redirectTo('${1}')"
-    ]
+    "body": ["miniProgram.redirectTo('${1}')"]
   },
   "miniProgram.navigateBack": {
     "prefix": "miniProgram.navigateBack",
-    "body": [
-      "miniProgram.navigateBack()"
-    ]
+    "body": ["miniProgram.navigateBack()"]
   },
   "miniProgram.reLaunch": {
     "prefix": "miniProgram.reLaunch",
-    "body": [
-      "miniProgram.reLaunch('${1}')"
-    ]
+    "body": ["miniProgram.reLaunch('${1}')"]
   },
   "miniProgram.switchTab": {
     "prefix": "miniProgram.switchTab",
-    "body": [
-      "miniProgram.switchTab('${1}')"
-    ]
+    "body": ["miniProgram.switchTab('${1}')"]
   },
   "miniProgram.currentPage": {
     "prefix": "miniProgram.currentPage",
-    "body": [
-      "miniProgram.currentPage()"
-    ]
+    "body": ["miniProgram.currentPage()"]
   },
   "miniProgram.systemInfo": {
     "prefix": "miniProgram.systemInfo",
-    "body": [
-      "miniProgram.systemInfo()"
-    ]
+    "body": ["miniProgram.systemInfo()"]
   },
   "miniProgram.pageScrollTo": {
     "prefix": "miniProgram.pageScrollTo",
-    "body": [
-      "miniProgram.pageScrollTo(${1})"
-    ]
+    "body": ["miniProgram.pageScrollTo(${1})"]
   },
   "miniProgram.disconnect": {
     "prefix": "miniProgram.disconnect",
-    "body": [
-      "miniProgram.disconnect()"
-    ]
+    "body": ["miniProgram.disconnect()"]
   },
   "miniProgram.close": {
     "prefix": "miniProgram.close",
-    "body": [
-      "miniProgram.close()"
-    ]
+    "body": ["miniProgram.close()"]
   },
   "miniProgram.callWxMethod": {
     "prefix": "miniProgram.callWxMethod",
-    "body": [
-      "miniProgram.callWxMethod('${1}', ${2})"
-    ]
+    "body": ["miniProgram.callWxMethod('${1}', ${2})"]
   },
   "miniProgram.mkWxMethod:result": {
     "prefix": "miniProgram.mockWxMethod:result",
-    "body": [
-      "miniProgram.mockWxMethod('${1}', ${2})"
-    ]
+    "body": ["miniProgram.mockWxMethod('${1}', ${2})"]
   },
   "miniProgram.mkWxMethod:function": {
     "prefix": "miniProgram.mockWxMethod:function",
-    "body": [
-      "miniProgram.callWxMethod('${1}', () => {",
-      "  ${2}",
-      "}, ${3})"
-    ]
+    "body": ["miniProgram.callWxMethod('${1}', () => {", "  ${2}", "}, ${3})"]
   },
   "miniProgram.restoreWxMethod": {
     "prefix": "miniProgram.restoreWxMethod",
-    "body": [
-      "miniProgram.restoreWxMethod('${1}')"
-    ]
+    "body": ["miniProgram.restoreWxMethod('${1}')"]
   },
   "miniProgram.evaluate": {
     "prefix": "miniProgram.evaluate",
-    "body": [
-      "miniProgram.evaluate(() => {",
-      "  ${1}",
-      "}, ${2})"
-    ]
+    "body": ["miniProgram.evaluate(() => {", "  ${1}", "}, ${2})"]
   },
   "miniProgram.exposeFunction": {
     "prefix": "miniProgram.exposeFunction",
-    "body": [
-      "miniProgram.exposeFunction('${1}', () => {",
-      "  ${2}",
-      "})"
-    ]
+    "body": ["miniProgram.exposeFunction('${1}', () => {", "  ${2}", "})"]
   },
   "miniProgram.remote": {
     "prefix": "miniProgram.remote",
-    "body": [
-      "miniProgram.remote()"
-    ]
+    "body": ["miniProgram.remote()"]
   },
   "miniProgram.on:console": {
     "prefix": "miniProgram.on:console",
-    "body": [
-      "miniProgram.on('console', msg => {",
-      "  ${1}",
-      "})"
-    ]
+    "body": ["miniProgram.on('console', msg => {", "  ${1}", "})"]
   },
   "miniProgram.on:exception": {
     "prefix": "miniProgram.on:exception",
-    "body": [
-      "miniProgram.on('exception', err => {",
-      "  ${1}",
-      "})"
-    ]
+    "body": ["miniProgram.on('exception', err => {", "  ${1}", "})"]
   },
   "page.path": {
     "prefix": "page.path",
-    "body": [
-      "page.path"
-    ]
+    "body": ["page.path"]
   },
   "page.query": {
     "prefix": "page.query",
-    "body": [
-      "page.query"
-    ]
+    "body": ["page.query"]
   },
   "page.size": {
     "prefix": "page.size",
-    "body": [
-      "page.size()"
-    ]
+    "body": ["page.size()"]
   },
   "page.scrollTop": {
     "prefix": "page.scrollTop",
-    "body": [
-      "page.scrollTop()"
-    ]
+    "body": ["page.scrollTop()"]
   },
   "page.$": {
     "prefix": "page.$",
-    "body": [
-      "page.$('${1}')"
-    ]
+    "body": ["page.$('${1}')"]
   },
   "page.$$": {
     "prefix": "page.$$",
-    "body": [
-      "page.$$('${1}')"
-    ]
+    "body": ["page.$$('${1}')"]
   },
   "page.waitFor": {
     "prefix": "page.waitFor",
-    "body": [
-      "page.waitFor(${1})"
-    ]
+    "body": ["page.waitFor(${1})"]
   },
   "page.data": {
     "prefix": "page.data",
-    "body": [
-      "page.data(${1})"
-    ]
+    "body": ["page.data(${1})"]
   },
   "page.setData": {
     "prefix": "page.setData",
-    "body": [
-      "page.setData(${1})"
-    ]
+    "body": ["page.setData(${1})"]
   },
   "page.callMethod": {
     "prefix": "page.callMethod",
-    "body": [
-      "page.callMethod(${1})"
-    ]
+    "body": ["page.callMethod(${1})"]
   },
   "element.tagName": {
     "prefix": "element.tagName",
-    "body": [
-      "element.tagName"
-    ]
+    "body": ["element.tagName"]
   },
   "element.$": {
     "prefix": "element.$",
-    "body": [
-      "element.$('${1}')"
-    ]
+    "body": ["element.$('${1}')"]
   },
   "element.$$": {
     "prefix": "element.$$",
-    "body": [
-      "element.$$('${1}')"
-    ]
+    "body": ["element.$$('${1}')"]
   },
   "element.size": {
     "prefix": "element.size",
-    "body": [
-      "element.size()"
-    ]
+    "body": ["element.size()"]
   },
   "element.offset": {
     "prefix": "element.offset",
-    "body": [
-      "element.offset()"
-    ]
+    "body": ["element.offset()"]
   },
   "element.text": {
     "prefix": "element.text",
-    "body": [
-      "element.text()"
-    ]
+    "body": ["element.text()"]
   },
   "element.attribute": {
     "prefix": "element.attribute",
-    "body": [
-      "element.attribute(${1})"
-    ]
+    "body": ["element.attribute(${1})"]
   },
   "element.property": {
     "prefix": "element.property",
-    "body": [
-      "element.property(${1})"
-    ]
+    "body": ["element.property(${1})"]
   },
   "element.wxml": {
     "prefix": "element.wxml",
-    "body": [
-      "element.wxml()"
-    ]
+    "body": ["element.wxml()"]
   },
   "element.outerWxml": {
     "prefix": "element.outerWxml",
-    "body": [
-      "element.outerWxml()"
-    ]
+    "body": ["element.outerWxml()"]
   },
   "element.value": {
     "prefix": "element.value",
-    "body": [
-      "element.value()"
-    ]
+    "body": ["element.value()"]
   },
   "element.style": {
     "prefix": "element.style",
-    "body": [
-      "element.style(${1})"
-    ]
+    "body": ["element.style(${1})"]
   },
   "element.tap": {
     "prefix": "element.tap",
-    "body": [
-      "element.tap()"
-    ]
+    "body": ["element.tap()"]
   },
   "element.longpress": {
     "prefix": "element.longpress",
-    "body": [
-      "element.longpress()"
-    ]
+    "body": ["element.longpress()"]
   },
   "element.touchstart": {
     "prefix": "element.touchstart",
@@ -318,159 +212,107 @@
   },
   "element.trigger": {
     "prefix": "element.trigger",
-    "body": [
-      "element.trigger(${1}, ${2})"
-    ]
+    "body": ["element.trigger(${1}, ${2})"]
   },
   "element.input": {
     "prefix": "element.input",
-    "body": [
-      "element.input(${1})"
-    ]
+    "body": ["element.input(${1})"]
   },
   "element.callMethod": {
     "prefix": "element.callMethod",
-    "body": [
-      "element.callMethod('${1}', ${2})"
-    ]
+    "body": ["element.callMethod('${1}', ${2})"]
   },
   "element.data": {
     "prefix": "element.data",
-    "body": [
-      "element.data(${1})"
-    ]
+    "body": ["element.data(${1})"]
   },
   "element.setData": {
     "prefix": "element.setData",
-    "body": [
-      "element.setData(${1})"
-    ]
+    "body": ["element.setData(${1})"]
   },
   "element.callContextMethod": {
     "prefix": "element.callContextMethod",
-    "body": [
-      "element.callContextMethod(${1}, ${2})"
-    ]
+    "body": ["element.callContextMethod(${1}, ${2})"]
   },
   "element.scrollWidth": {
     "prefix": "element.scrollWidth",
-    "body": [
-      "element.scrollWidth()"
-    ]
+    "body": ["element.scrollWidth()"]
   },
   "element.scrollHeight": {
     "prefix": "element.scrollHeight",
-    "body": [
-      "element.scrollHeight()"
-    ]
+    "body": ["element.scrollHeight()"]
   },
   "element.scrollTo": {
     "prefix": "element.scrollTo",
-    "body": [
-      "element.scrollTo(${1}, ${2})"
-    ]
+    "body": ["element.scrollTo(${1}, ${2})"]
   },
   "element.swipeTo": {
     "prefix": "element.swipeTo",
-    "body": [
-      "element.swipeTo(${1})"
-    ]
+    "body": ["element.swipeTo(${1})"]
   },
   "element.moveTo": {
     "prefix": "element.moveTo",
-    "body": [
-      "element.moveTo(${1}, ${2})"
-    ]
+    "body": ["element.moveTo(${1}, ${2})"]
   },
   "element.slideTo": {
     "prefix": "element.slideTo",
-    "body": [
-      "element.slideTo(${1})"
-    ]
+    "body": ["element.slideTo(${1})"]
   },
   "coverView.tagName": {
     "prefix": "coverView.tagName",
-    "body": [
-      "coverView.tagName"
-    ]
+    "body": ["coverView.tagName"]
   },
   "coverView.$": {
     "prefix": "coverView.$",
-    "body": [
-      "coverView.$('${1}')"
-    ]
+    "body": ["coverView.$('${1}')"]
   },
   "coverView.$$": {
     "prefix": "coverView.$$",
-    "body": [
-      "coverView.$$('${1}')"
-    ]
+    "body": ["coverView.$$('${1}')"]
   },
   "coverView.size": {
     "prefix": "coverView.size",
-    "body": [
-      "coverView.size()"
-    ]
+    "body": ["coverView.size()"]
   },
   "coverView.offset": {
     "prefix": "coverView.offset",
-    "body": [
-      "coverView.offset()"
-    ]
+    "body": ["coverView.offset()"]
   },
   "coverView.text": {
     "prefix": "coverView.text",
-    "body": [
-      "coverView.text()"
-    ]
+    "body": ["coverView.text()"]
   },
   "coverView.attribute": {
     "prefix": "coverView.attribute",
-    "body": [
-      "coverView.attribute(${1})"
-    ]
+    "body": ["coverView.attribute(${1})"]
   },
   "coverView.property": {
     "prefix": "coverView.property",
-    "body": [
-      "coverView.property(${1})"
-    ]
+    "body": ["coverView.property(${1})"]
   },
   "coverView.wxml": {
     "prefix": "coverView.wxml",
-    "body": [
-      "coverView.wxml()"
-    ]
+    "body": ["coverView.wxml()"]
   },
   "coverView.outerWxml": {
     "prefix": "coverView.outerWxml",
-    "body": [
-      "coverView.outerWxml()"
-    ]
+    "body": ["coverView.outerWxml()"]
   },
   "coverView.value": {
     "prefix": "coverView.value",
-    "body": [
-      "coverView.value()"
-    ]
+    "body": ["coverView.value()"]
   },
   "coverView.style": {
     "prefix": "coverView.style",
-    "body": [
-      "coverView.style(${1})"
-    ]
+    "body": ["coverView.style(${1})"]
   },
   "coverView.tap": {
     "prefix": "coverView.tap",
-    "body": [
-      "coverView.tap()"
-    ]
+    "body": ["coverView.tap()"]
   },
   "coverView.longpress": {
     "prefix": "coverView.longpress",
-    "body": [
-      "coverView.longpress()"
-    ]
+    "body": ["coverView.longpress()"]
   },
   "coverView.touchstart": {
     "prefix": "coverView.touchstart",
@@ -501,93 +343,63 @@
   },
   "coverView.trigger": {
     "prefix": "coverView.trigger",
-    "body": [
-      "coverView.trigger(${1}, ${2})"
-    ]
+    "body": ["coverView.trigger(${1}, ${2})"]
   },
   "coverImage.tagName": {
     "prefix": "coverImage.tagName",
-    "body": [
-      "coverImage.tagName"
-    ]
+    "body": ["coverImage.tagName"]
   },
   "coverImage.$": {
     "prefix": "coverImage.$",
-    "body": [
-      "coverImage.$('${1}')"
-    ]
+    "body": ["coverImage.$('${1}')"]
   },
   "coverImage.$$": {
     "prefix": "coverImage.$$",
-    "body": [
-      "coverImage.$$('${1}')"
-    ]
+    "body": ["coverImage.$$('${1}')"]
   },
   "coverImage.size": {
     "prefix": "coverImage.size",
-    "body": [
-      "coverImage.size()"
-    ]
+    "body": ["coverImage.size()"]
   },
   "coverImage.offset": {
     "prefix": "coverImage.offset",
-    "body": [
-      "coverImage.offset()"
-    ]
+    "body": ["coverImage.offset()"]
   },
   "coverImage.text": {
     "prefix": "coverImage.text",
-    "body": [
-      "coverImage.text()"
-    ]
+    "body": ["coverImage.text()"]
   },
   "coverImage.attribute": {
     "prefix": "coverImage.attribute",
-    "body": [
-      "coverImage.attribute(${1})"
-    ]
+    "body": ["coverImage.attribute(${1})"]
   },
   "coverImage.property": {
     "prefix": "coverImage.property",
-    "body": [
-      "coverImage.property(${1})"
-    ]
+    "body": ["coverImage.property(${1})"]
   },
   "coverImage.wxml": {
     "prefix": "coverImage.wxml",
-    "body": [
-      "coverImage.wxml()"
-    ]
+    "body": ["coverImage.wxml()"]
   },
   "coverImage.outerWxml": {
     "prefix": "coverImage.outerWxml",
-    "body": [
-      "coverImage.outerWxml()"
-    ]
+    "body": ["coverImage.outerWxml()"]
   },
   "coverImage.value": {
     "prefix": "coverImage.value",
-    "body": [
-      "coverImage.value()"
-    ]
+    "body": ["coverImage.value()"]
   },
   "coverImage.style": {
     "prefix": "coverImage.style",
-    "body": [
-      "coverImage.style(${1})"
-    ]
+    "body": ["coverImage.style(${1})"]
   },
   "coverImage.tap": {
     "prefix": "coverImage.tap",
-    "body": [
-      "coverImage.tap()"
-    ]
+    "body": ["coverImage.tap()"]
   },
   "coverImage.longpress": {
     "prefix": "coverImage.longpress",
-    "body": [
-      "coverImage.longpress()"
-    ]
+    "body": ["coverImage.longpress()"]
   },
   "coverImage.touchstart": {
     "prefix": "coverImage.touchstart",
@@ -618,93 +430,63 @@
   },
   "coverImage.trigger": {
     "prefix": "coverImage.trigger",
-    "body": [
-      "coverImage.trigger(${1}, ${2})"
-    ]
+    "body": ["coverImage.trigger(${1}, ${2})"]
   },
   "scrollView.tagName": {
     "prefix": "scrollView.tagName",
-    "body": [
-      "scrollView.tagName"
-    ]
+    "body": ["scrollView.tagName"]
   },
   "scrollView.$": {
     "prefix": "scrollView.$",
-    "body": [
-      "scrollView.$('${1}')"
-    ]
+    "body": ["scrollView.$('${1}')"]
   },
   "scrollView.$$": {
     "prefix": "scrollView.$$",
-    "body": [
-      "scrollView.$$('${1}')"
-    ]
+    "body": ["scrollView.$$('${1}')"]
   },
   "scrollView.size": {
     "prefix": "scrollView.size",
-    "body": [
-      "scrollView.size()"
-    ]
+    "body": ["scrollView.size()"]
   },
   "scrollView.offset": {
     "prefix": "scrollView.offset",
-    "body": [
-      "scrollView.offset()"
-    ]
+    "body": ["scrollView.offset()"]
   },
   "scrollView.text": {
     "prefix": "scrollView.text",
-    "body": [
-      "scrollView.text()"
-    ]
+    "body": ["scrollView.text()"]
   },
   "scrollView.attribute": {
     "prefix": "scrollView.attribute",
-    "body": [
-      "scrollView.attribute(${1})"
-    ]
+    "body": ["scrollView.attribute(${1})"]
   },
   "scrollView.property": {
     "prefix": "scrollView.property",
-    "body": [
-      "scrollView.property(${1})"
-    ]
+    "body": ["scrollView.property(${1})"]
   },
   "scrollView.wxml": {
     "prefix": "scrollView.wxml",
-    "body": [
-      "scrollView.wxml()"
-    ]
+    "body": ["scrollView.wxml()"]
   },
   "scrollView.outerWxml": {
     "prefix": "scrollView.outerWxml",
-    "body": [
-      "scrollView.outerWxml()"
-    ]
+    "body": ["scrollView.outerWxml()"]
   },
   "scrollView.value": {
     "prefix": "scrollView.value",
-    "body": [
-      "scrollView.value()"
-    ]
+    "body": ["scrollView.value()"]
   },
   "scrollView.style": {
     "prefix": "scrollView.style",
-    "body": [
-      "scrollView.style(${1})"
-    ]
+    "body": ["scrollView.style(${1})"]
   },
   "scrollView.tap": {
     "prefix": "scrollView.tap",
-    "body": [
-      "scrollView.tap()"
-    ]
+    "body": ["scrollView.tap()"]
   },
   "scrollView.longpress": {
     "prefix": "scrollView.longpress",
-    "body": [
-      "scrollView.longpress()"
-    ]
+    "body": ["scrollView.longpress()"]
   },
   "scrollView.touchstart": {
     "prefix": "scrollView.touchstart",
@@ -735,111 +517,75 @@
   },
   "scrollView.trigger": {
     "prefix": "scrollView.trigger",
-    "body": [
-      "scrollView.trigger(${1}, ${2})"
-    ]
+    "body": ["scrollView.trigger(${1}, ${2})"]
   },
   "scrollView.scrollWidth": {
     "prefix": "scrollView.scrollWidth",
-    "body": [
-      "scrollView.scrollWidth()"
-    ]
+    "body": ["scrollView.scrollWidth()"]
   },
   "scrollView.scrollHeight": {
     "prefix": "scrollView.scrollHeight",
-    "body": [
-      "scrollView.scrollHeight()"
-    ]
+    "body": ["scrollView.scrollHeight()"]
   },
   "scrollView.scrollTo": {
     "prefix": "scrollView.scrollTo",
-    "body": [
-      "scrollView.scrollTo(${1}, ${2})"
-    ]
+    "body": ["scrollView.scrollTo(${1}, ${2})"]
   },
   "movableArea.tagName": {
     "prefix": "movableArea.tagName",
-    "body": [
-      "movableArea.tagName"
-    ]
+    "body": ["movableArea.tagName"]
   },
   "movableArea.$": {
     "prefix": "movableArea.$",
-    "body": [
-      "movableArea.$('${1}')"
-    ]
+    "body": ["movableArea.$('${1}')"]
   },
   "movableArea.$$": {
     "prefix": "movableArea.$$",
-    "body": [
-      "movableArea.$$('${1}')"
-    ]
+    "body": ["movableArea.$$('${1}')"]
   },
   "movableArea.size": {
     "prefix": "movableArea.size",
-    "body": [
-      "movableArea.size()"
-    ]
+    "body": ["movableArea.size()"]
   },
   "movableArea.offset": {
     "prefix": "movableArea.offset",
-    "body": [
-      "movableArea.offset()"
-    ]
+    "body": ["movableArea.offset()"]
   },
   "movableArea.text": {
     "prefix": "movableArea.text",
-    "body": [
-      "movableArea.text()"
-    ]
+    "body": ["movableArea.text()"]
   },
   "movableArea.attribute": {
     "prefix": "movableArea.attribute",
-    "body": [
-      "movableArea.attribute(${1})"
-    ]
+    "body": ["movableArea.attribute(${1})"]
   },
   "movableArea.property": {
     "prefix": "movableArea.property",
-    "body": [
-      "movableArea.property(${1})"
-    ]
+    "body": ["movableArea.property(${1})"]
   },
   "movableArea.wxml": {
     "prefix": "movableArea.wxml",
-    "body": [
-      "movableArea.wxml()"
-    ]
+    "body": ["movableArea.wxml()"]
   },
   "movableArea.outerWxml": {
     "prefix": "movableArea.outerWxml",
-    "body": [
-      "movableArea.outerWxml()"
-    ]
+    "body": ["movableArea.outerWxml()"]
   },
   "movableArea.value": {
     "prefix": "movableArea.value",
-    "body": [
-      "movableArea.value()"
-    ]
+    "body": ["movableArea.value()"]
   },
   "movableArea.style": {
     "prefix": "movableArea.style",
-    "body": [
-      "movableArea.style(${1})"
-    ]
+    "body": ["movableArea.style(${1})"]
   },
   "movableArea.tap": {
     "prefix": "movableArea.tap",
-    "body": [
-      "movableArea.tap()"
-    ]
+    "body": ["movableArea.tap()"]
   },
   "movableArea.longpress": {
     "prefix": "movableArea.longpress",
-    "body": [
-      "movableArea.longpress()"
-    ]
+    "body": ["movableArea.longpress()"]
   },
   "movableArea.touchstart": {
     "prefix": "movableArea.touchstart",
@@ -870,93 +616,63 @@
   },
   "movableArea.trigger": {
     "prefix": "movableArea.trigger",
-    "body": [
-      "movableArea.trigger(${1}, ${2})"
-    ]
+    "body": ["movableArea.trigger(${1}, ${2})"]
   },
   "movableView.tagName": {
     "prefix": "movableView.tagName",
-    "body": [
-      "movableView.tagName"
-    ]
+    "body": ["movableView.tagName"]
   },
   "movableView.$": {
     "prefix": "movableView.$",
-    "body": [
-      "movableView.$('${1}')"
-    ]
+    "body": ["movableView.$('${1}')"]
   },
   "movableView.$$": {
     "prefix": "movableView.$$",
-    "body": [
-      "movableView.$$('${1}')"
-    ]
+    "body": ["movableView.$$('${1}')"]
   },
   "movableView.size": {
     "prefix": "movableView.size",
-    "body": [
-      "movableView.size()"
-    ]
+    "body": ["movableView.size()"]
   },
   "movableView.offset": {
     "prefix": "movableView.offset",
-    "body": [
-      "movableView.offset()"
-    ]
+    "body": ["movableView.offset()"]
   },
   "movableView.text": {
     "prefix": "movableView.text",
-    "body": [
-      "movableView.text()"
-    ]
+    "body": ["movableView.text()"]
   },
   "movableView.attribute": {
     "prefix": "movableView.attribute",
-    "body": [
-      "movableView.attribute(${1})"
-    ]
+    "body": ["movableView.attribute(${1})"]
   },
   "movableView.property": {
     "prefix": "movableView.property",
-    "body": [
-      "movableView.property(${1})"
-    ]
+    "body": ["movableView.property(${1})"]
   },
   "movableView.wxml": {
     "prefix": "movableView.wxml",
-    "body": [
-      "movableView.wxml()"
-    ]
+    "body": ["movableView.wxml()"]
   },
   "movableView.outerWxml": {
     "prefix": "movableView.outerWxml",
-    "body": [
-      "movableView.outerWxml()"
-    ]
+    "body": ["movableView.outerWxml()"]
   },
   "movableView.value": {
     "prefix": "movableView.value",
-    "body": [
-      "movableView.value()"
-    ]
+    "body": ["movableView.value()"]
   },
   "movableView.style": {
     "prefix": "movableView.style",
-    "body": [
-      "movableView.style(${1})"
-    ]
+    "body": ["movableView.style(${1})"]
   },
   "movableView.tap": {
     "prefix": "movableView.tap",
-    "body": [
-      "movableView.tap()"
-    ]
+    "body": ["movableView.tap()"]
   },
   "movableView.longpress": {
     "prefix": "movableView.longpress",
-    "body": [
-      "movableView.longpress()"
-    ]
+    "body": ["movableView.longpress()"]
   },
   "movableView.touchstart": {
     "prefix": "movableView.touchstart",
@@ -987,99 +703,67 @@
   },
   "movableView.trigger": {
     "prefix": "movableView.trigger",
-    "body": [
-      "movableView.trigger(${1}, ${2})"
-    ]
+    "body": ["movableView.trigger(${1}, ${2})"]
   },
   "movableView.moveTo": {
     "prefix": "movableView.moveTo",
-    "body": [
-      "movableView.moveTo(${1}, ${2})"
-    ]
+    "body": ["movableView.moveTo(${1}, ${2})"]
   },
   "swiper.tagName": {
     "prefix": "swiper.tagName",
-    "body": [
-      "swiper.tagName"
-    ]
+    "body": ["swiper.tagName"]
   },
   "swiper.$": {
     "prefix": "swiper.$",
-    "body": [
-      "swiper.$('${1}')"
-    ]
+    "body": ["swiper.$('${1}')"]
   },
   "swiper.$$": {
     "prefix": "swiper.$$",
-    "body": [
-      "swiper.$$('${1}')"
-    ]
+    "body": ["swiper.$$('${1}')"]
   },
   "swiper.size": {
     "prefix": "swiper.size",
-    "body": [
-      "swiper.size()"
-    ]
+    "body": ["swiper.size()"]
   },
   "swiper.offset": {
     "prefix": "swiper.offset",
-    "body": [
-      "swiper.offset()"
-    ]
+    "body": ["swiper.offset()"]
   },
   "swiper.text": {
     "prefix": "swiper.text",
-    "body": [
-      "swiper.text()"
-    ]
+    "body": ["swiper.text()"]
   },
   "swiper.attribute": {
     "prefix": "swiper.attribute",
-    "body": [
-      "swiper.attribute(${1})"
-    ]
+    "body": ["swiper.attribute(${1})"]
   },
   "swiper.property": {
     "prefix": "swiper.property",
-    "body": [
-      "swiper.property(${1})"
-    ]
+    "body": ["swiper.property(${1})"]
   },
   "swiper.wxml": {
     "prefix": "swiper.wxml",
-    "body": [
-      "swiper.wxml()"
-    ]
+    "body": ["swiper.wxml()"]
   },
   "swiper.outerWxml": {
     "prefix": "swiper.outerWxml",
-    "body": [
-      "swiper.outerWxml()"
-    ]
+    "body": ["swiper.outerWxml()"]
   },
   "swiper.value": {
     "prefix": "swiper.value",
-    "body": [
-      "swiper.value()"
-    ]
+    "body": ["swiper.value()"]
   },
   "swiper.style": {
     "prefix": "swiper.style",
-    "body": [
-      "swiper.style(${1})"
-    ]
+    "body": ["swiper.style(${1})"]
   },
   "swiper.tap": {
     "prefix": "swiper.tap",
-    "body": [
-      "swiper.tap()"
-    ]
+    "body": ["swiper.tap()"]
   },
   "swiper.longpress": {
     "prefix": "swiper.longpress",
-    "body": [
-      "swiper.longpress()"
-    ]
+    "body": ["swiper.longpress()"]
   },
   "swiper.touchstart": {
     "prefix": "swiper.touchstart",
@@ -1110,99 +794,67 @@
   },
   "swiper.trigger": {
     "prefix": "swiper.trigger",
-    "body": [
-      "swiper.trigger(${1}, ${2})"
-    ]
+    "body": ["swiper.trigger(${1}, ${2})"]
   },
   "swiper.swipeTo": {
     "prefix": "swiper.swipeTo",
-    "body": [
-      "swiper.swipeTo(${1})"
-    ]
+    "body": ["swiper.swipeTo(${1})"]
   },
   "swiperItem.tagName": {
     "prefix": "swiperItem.tagName",
-    "body": [
-      "swiperItem.tagName"
-    ]
+    "body": ["swiperItem.tagName"]
   },
   "swiperItem.$": {
     "prefix": "swiperItem.$",
-    "body": [
-      "swiperItem.$('${1}')"
-    ]
+    "body": ["swiperItem.$('${1}')"]
   },
   "swiperItem.$$": {
     "prefix": "swiperItem.$$",
-    "body": [
-      "swiperItem.$$('${1}')"
-    ]
+    "body": ["swiperItem.$$('${1}')"]
   },
   "swiperItem.size": {
     "prefix": "swiperItem.size",
-    "body": [
-      "swiperItem.size()"
-    ]
+    "body": ["swiperItem.size()"]
   },
   "swiperItem.offset": {
     "prefix": "swiperItem.offset",
-    "body": [
-      "swiperItem.offset()"
-    ]
+    "body": ["swiperItem.offset()"]
   },
   "swiperItem.text": {
     "prefix": "swiperItem.text",
-    "body": [
-      "swiperItem.text()"
-    ]
+    "body": ["swiperItem.text()"]
   },
   "swiperItem.attribute": {
     "prefix": "swiperItem.attribute",
-    "body": [
-      "swiperItem.attribute(${1})"
-    ]
+    "body": ["swiperItem.attribute(${1})"]
   },
   "swiperItem.property": {
     "prefix": "swiperItem.property",
-    "body": [
-      "swiperItem.property(${1})"
-    ]
+    "body": ["swiperItem.property(${1})"]
   },
   "swiperItem.wxml": {
     "prefix": "swiperItem.wxml",
-    "body": [
-      "swiperItem.wxml()"
-    ]
+    "body": ["swiperItem.wxml()"]
   },
   "swiperItem.outerWxml": {
     "prefix": "swiperItem.outerWxml",
-    "body": [
-      "swiperItem.outerWxml()"
-    ]
+    "body": ["swiperItem.outerWxml()"]
   },
   "swiperItem.value": {
     "prefix": "swiperItem.value",
-    "body": [
-      "swiperItem.value()"
-    ]
+    "body": ["swiperItem.value()"]
   },
   "swiperItem.style": {
     "prefix": "swiperItem.style",
-    "body": [
-      "swiperItem.style(${1})"
-    ]
+    "body": ["swiperItem.style(${1})"]
   },
   "swiperItem.tap": {
     "prefix": "swiperItem.tap",
-    "body": [
-      "swiperItem.tap()"
-    ]
+    "body": ["swiperItem.tap()"]
   },
   "swiperItem.longpress": {
     "prefix": "swiperItem.longpress",
-    "body": [
-      "swiperItem.longpress()"
-    ]
+    "body": ["swiperItem.longpress()"]
   },
   "swiperItem.touchstart": {
     "prefix": "swiperItem.touchstart",
@@ -1233,93 +885,63 @@
   },
   "swiperItem.trigger": {
     "prefix": "swiperItem.trigger",
-    "body": [
-      "swiperItem.trigger(${1}, ${2})"
-    ]
+    "body": ["swiperItem.trigger(${1}, ${2})"]
   },
   "view.tagName": {
     "prefix": "view.tagName",
-    "body": [
-      "view.tagName"
-    ]
+    "body": ["view.tagName"]
   },
   "view.$": {
     "prefix": "view.$",
-    "body": [
-      "view.$('${1}')"
-    ]
+    "body": ["view.$('${1}')"]
   },
   "view.$$": {
     "prefix": "view.$$",
-    "body": [
-      "view.$$('${1}')"
-    ]
+    "body": ["view.$$('${1}')"]
   },
   "view.size": {
     "prefix": "view.size",
-    "body": [
-      "view.size()"
-    ]
+    "body": ["view.size()"]
   },
   "view.offset": {
     "prefix": "view.offset",
-    "body": [
-      "view.offset()"
-    ]
+    "body": ["view.offset()"]
   },
   "view.text": {
     "prefix": "view.text",
-    "body": [
-      "view.text()"
-    ]
+    "body": ["view.text()"]
   },
   "view.attribute": {
     "prefix": "view.attribute",
-    "body": [
-      "view.attribute(${1})"
-    ]
+    "body": ["view.attribute(${1})"]
   },
   "view.property": {
     "prefix": "view.property",
-    "body": [
-      "view.property(${1})"
-    ]
+    "body": ["view.property(${1})"]
   },
   "view.wxml": {
     "prefix": "view.wxml",
-    "body": [
-      "view.wxml()"
-    ]
+    "body": ["view.wxml()"]
   },
   "view.outerWxml": {
     "prefix": "view.outerWxml",
-    "body": [
-      "view.outerWxml()"
-    ]
+    "body": ["view.outerWxml()"]
   },
   "view.value": {
     "prefix": "view.value",
-    "body": [
-      "view.value()"
-    ]
+    "body": ["view.value()"]
   },
   "view.style": {
     "prefix": "view.style",
-    "body": [
-      "view.style(${1})"
-    ]
+    "body": ["view.style(${1})"]
   },
   "view.tap": {
     "prefix": "view.tap",
-    "body": [
-      "view.tap()"
-    ]
+    "body": ["view.tap()"]
   },
   "view.longpress": {
     "prefix": "view.longpress",
-    "body": [
-      "view.longpress()"
-    ]
+    "body": ["view.longpress()"]
   },
   "view.touchstart": {
     "prefix": "view.touchstart",
@@ -1350,93 +972,63 @@
   },
   "view.trigger": {
     "prefix": "view.trigger",
-    "body": [
-      "view.trigger(${1}, ${2})"
-    ]
+    "body": ["view.trigger(${1}, ${2})"]
   },
   "icon.tagName": {
     "prefix": "icon.tagName",
-    "body": [
-      "icon.tagName"
-    ]
+    "body": ["icon.tagName"]
   },
   "icon.$": {
     "prefix": "icon.$",
-    "body": [
-      "icon.$('${1}')"
-    ]
+    "body": ["icon.$('${1}')"]
   },
   "icon.$$": {
     "prefix": "icon.$$",
-    "body": [
-      "icon.$$('${1}')"
-    ]
+    "body": ["icon.$$('${1}')"]
   },
   "icon.size": {
     "prefix": "icon.size",
-    "body": [
-      "icon.size()"
-    ]
+    "body": ["icon.size()"]
   },
   "icon.offset": {
     "prefix": "icon.offset",
-    "body": [
-      "icon.offset()"
-    ]
+    "body": ["icon.offset()"]
   },
   "icon.text": {
     "prefix": "icon.text",
-    "body": [
-      "icon.text()"
-    ]
+    "body": ["icon.text()"]
   },
   "icon.attribute": {
     "prefix": "icon.attribute",
-    "body": [
-      "icon.attribute(${1})"
-    ]
+    "body": ["icon.attribute(${1})"]
   },
   "icon.property": {
     "prefix": "icon.property",
-    "body": [
-      "icon.property(${1})"
-    ]
+    "body": ["icon.property(${1})"]
   },
   "icon.wxml": {
     "prefix": "icon.wxml",
-    "body": [
-      "icon.wxml()"
-    ]
+    "body": ["icon.wxml()"]
   },
   "icon.outerWxml": {
     "prefix": "icon.outerWxml",
-    "body": [
-      "icon.outerWxml()"
-    ]
+    "body": ["icon.outerWxml()"]
   },
   "icon.value": {
     "prefix": "icon.value",
-    "body": [
-      "icon.value()"
-    ]
+    "body": ["icon.value()"]
   },
   "icon.style": {
     "prefix": "icon.style",
-    "body": [
-      "icon.style(${1})"
-    ]
+    "body": ["icon.style(${1})"]
   },
   "icon.tap": {
     "prefix": "icon.tap",
-    "body": [
-      "icon.tap()"
-    ]
+    "body": ["icon.tap()"]
   },
   "icon.longpress": {
     "prefix": "icon.longpress",
-    "body": [
-      "icon.longpress()"
-    ]
+    "body": ["icon.longpress()"]
   },
   "icon.touchstart": {
     "prefix": "icon.touchstart",
@@ -1467,93 +1059,63 @@
   },
   "icon.trigger": {
     "prefix": "icon.trigger",
-    "body": [
-      "icon.trigger(${1}, ${2})"
-    ]
+    "body": ["icon.trigger(${1}, ${2})"]
   },
   "progress.tagName": {
     "prefix": "progress.tagName",
-    "body": [
-      "progress.tagName"
-    ]
+    "body": ["progress.tagName"]
   },
   "progress.$": {
     "prefix": "progress.$",
-    "body": [
-      "progress.$('${1}')"
-    ]
+    "body": ["progress.$('${1}')"]
   },
   "progress.$$": {
     "prefix": "progress.$$",
-    "body": [
-      "progress.$$('${1}')"
-    ]
+    "body": ["progress.$$('${1}')"]
   },
   "progress.size": {
     "prefix": "progress.size",
-    "body": [
-      "progress.size()"
-    ]
+    "body": ["progress.size()"]
   },
   "progress.offset": {
     "prefix": "progress.offset",
-    "body": [
-      "progress.offset()"
-    ]
+    "body": ["progress.offset()"]
   },
   "progress.text": {
     "prefix": "progress.text",
-    "body": [
-      "progress.text()"
-    ]
+    "body": ["progress.text()"]
   },
   "progress.attribute": {
     "prefix": "progress.attribute",
-    "body": [
-      "progress.attribute(${1})"
-    ]
+    "body": ["progress.attribute(${1})"]
   },
   "progress.property": {
     "prefix": "progress.property",
-    "body": [
-      "progress.property(${1})"
-    ]
+    "body": ["progress.property(${1})"]
   },
   "progress.wxml": {
     "prefix": "progress.wxml",
-    "body": [
-      "progress.wxml()"
-    ]
+    "body": ["progress.wxml()"]
   },
   "progress.outerWxml": {
     "prefix": "progress.outerWxml",
-    "body": [
-      "progress.outerWxml()"
-    ]
+    "body": ["progress.outerWxml()"]
   },
   "progress.value": {
     "prefix": "progress.value",
-    "body": [
-      "progress.value()"
-    ]
+    "body": ["progress.value()"]
   },
   "progress.style": {
     "prefix": "progress.style",
-    "body": [
-      "progress.style(${1})"
-    ]
+    "body": ["progress.style(${1})"]
   },
   "progress.tap": {
     "prefix": "progress.tap",
-    "body": [
-      "progress.tap()"
-    ]
+    "body": ["progress.tap()"]
   },
   "progress.longpress": {
     "prefix": "progress.longpress",
-    "body": [
-      "progress.longpress()"
-    ]
+    "body": ["progress.longpress()"]
   },
   "progress.touchstart": {
     "prefix": "progress.touchstart",
@@ -1584,93 +1146,63 @@
   },
   "progress.trigger": {
     "prefix": "progress.trigger",
-    "body": [
-      "progress.trigger(${1}, ${2})"
-    ]
+    "body": ["progress.trigger(${1}, ${2})"]
   },
   "richText.tagName": {
     "prefix": "richText.tagName",
-    "body": [
-      "richText.tagName"
-    ]
+    "body": ["richText.tagName"]
   },
   "richText.$": {
     "prefix": "richText.$",
-    "body": [
-      "richText.$('${1}')"
-    ]
+    "body": ["richText.$('${1}')"]
   },
   "richText.$$": {
     "prefix": "richText.$$",
-    "body": [
-      "richText.$$('${1}')"
-    ]
+    "body": ["richText.$$('${1}')"]
   },
   "richText.size": {
     "prefix": "richText.size",
-    "body": [
-      "richText.size()"
-    ]
+    "body": ["richText.size()"]
   },
   "richText.offset": {
     "prefix": "richText.offset",
-    "body": [
-      "richText.offset()"
-    ]
+    "body": ["richText.offset()"]
   },
   "richText.text": {
     "prefix": "richText.text",
-    "body": [
-      "richText.text()"
-    ]
+    "body": ["richText.text()"]
   },
   "richText.attribute": {
     "prefix": "richText.attribute",
-    "body": [
-      "richText.attribute(${1})"
-    ]
+    "body": ["richText.attribute(${1})"]
   },
   "richText.property": {
     "prefix": "richText.property",
-    "body": [
-      "richText.property(${1})"
-    ]
+    "body": ["richText.property(${1})"]
   },
   "richText.wxml": {
     "prefix": "richText.wxml",
-    "body": [
-      "richText.wxml()"
-    ]
+    "body": ["richText.wxml()"]
   },
   "richText.outerWxml": {
     "prefix": "richText.outerWxml",
-    "body": [
-      "richText.outerWxml()"
-    ]
+    "body": ["richText.outerWxml()"]
   },
   "richText.value": {
     "prefix": "richText.value",
-    "body": [
-      "richText.value()"
-    ]
+    "body": ["richText.value()"]
   },
   "richText.style": {
     "prefix": "richText.style",
-    "body": [
-      "richText.style(${1})"
-    ]
+    "body": ["richText.style(${1})"]
   },
   "richText.tap": {
     "prefix": "richText.tap",
-    "body": [
-      "richText.tap()"
-    ]
+    "body": ["richText.tap()"]
   },
   "richText.longpress": {
     "prefix": "richText.longpress",
-    "body": [
-      "richText.longpress()"
-    ]
+    "body": ["richText.longpress()"]
   },
   "richText.touchstart": {
     "prefix": "richText.touchstart",
@@ -1701,93 +1233,63 @@
   },
   "richText.trigger": {
     "prefix": "richText.trigger",
-    "body": [
-      "richText.trigger(${1}, ${2})"
-    ]
+    "body": ["richText.trigger(${1}, ${2})"]
   },
   "text.tagName": {
     "prefix": "text.tagName",
-    "body": [
-      "text.tagName"
-    ]
+    "body": ["text.tagName"]
   },
   "text.$": {
     "prefix": "text.$",
-    "body": [
-      "text.$('${1}')"
-    ]
+    "body": ["text.$('${1}')"]
   },
   "text.$$": {
     "prefix": "text.$$",
-    "body": [
-      "text.$$('${1}')"
-    ]
+    "body": ["text.$$('${1}')"]
   },
   "text.size": {
     "prefix": "text.size",
-    "body": [
-      "text.size()"
-    ]
+    "body": ["text.size()"]
   },
   "text.offset": {
     "prefix": "text.offset",
-    "body": [
-      "text.offset()"
-    ]
+    "body": ["text.offset()"]
   },
   "text.text": {
     "prefix": "text.text",
-    "body": [
-      "text.text()"
-    ]
+    "body": ["text.text()"]
   },
   "text.attribute": {
     "prefix": "text.attribute",
-    "body": [
-      "text.attribute(${1})"
-    ]
+    "body": ["text.attribute(${1})"]
   },
   "text.property": {
     "prefix": "text.property",
-    "body": [
-      "text.property(${1})"
-    ]
+    "body": ["text.property(${1})"]
   },
   "text.wxml": {
     "prefix": "text.wxml",
-    "body": [
-      "text.wxml()"
-    ]
+    "body": ["text.wxml()"]
   },
   "text.outerWxml": {
     "prefix": "text.outerWxml",
-    "body": [
-      "text.outerWxml()"
-    ]
+    "body": ["text.outerWxml()"]
   },
   "text.value": {
     "prefix": "text.value",
-    "body": [
-      "text.value()"
-    ]
+    "body": ["text.value()"]
   },
   "text.style": {
     "prefix": "text.style",
-    "body": [
-      "text.style(${1})"
-    ]
+    "body": ["text.style(${1})"]
   },
   "text.tap": {
     "prefix": "text.tap",
-    "body": [
-      "text.tap()"
-    ]
+    "body": ["text.tap()"]
   },
   "text.longpress": {
     "prefix": "text.longpress",
-    "body": [
-      "text.longpress()"
-    ]
+    "body": ["text.longpress()"]
   },
   "text.touchstart": {
     "prefix": "text.touchstart",
@@ -1818,93 +1320,63 @@
   },
   "text.trigger": {
     "prefix": "text.trigger",
-    "body": [
-      "text.trigger(${1}, ${2})"
-    ]
+    "body": ["text.trigger(${1}, ${2})"]
   },
   "button.tagName": {
     "prefix": "button.tagName",
-    "body": [
-      "button.tagName"
-    ]
+    "body": ["button.tagName"]
   },
   "button.$": {
     "prefix": "button.$",
-    "body": [
-      "button.$('${1}')"
-    ]
+    "body": ["button.$('${1}')"]
   },
   "button.$$": {
     "prefix": "button.$$",
-    "body": [
-      "button.$$('${1}')"
-    ]
+    "body": ["button.$$('${1}')"]
   },
   "button.size": {
     "prefix": "button.size",
-    "body": [
-      "button.size()"
-    ]
+    "body": ["button.size()"]
   },
   "button.offset": {
     "prefix": "button.offset",
-    "body": [
-      "button.offset()"
-    ]
+    "body": ["button.offset()"]
   },
   "button.text": {
     "prefix": "button.text",
-    "body": [
-      "button.text()"
-    ]
+    "body": ["button.text()"]
   },
   "button.attribute": {
     "prefix": "button.attribute",
-    "body": [
-      "button.attribute(${1})"
-    ]
+    "body": ["button.attribute(${1})"]
   },
   "button.property": {
     "prefix": "button.property",
-    "body": [
-      "button.property(${1})"
-    ]
+    "body": ["button.property(${1})"]
   },
   "button.wxml": {
     "prefix": "button.wxml",
-    "body": [
-      "button.wxml()"
-    ]
+    "body": ["button.wxml()"]
   },
   "button.outerWxml": {
     "prefix": "button.outerWxml",
-    "body": [
-      "button.outerWxml()"
-    ]
+    "body": ["button.outerWxml()"]
   },
   "button.value": {
     "prefix": "button.value",
-    "body": [
-      "button.value()"
-    ]
+    "body": ["button.value()"]
   },
   "button.style": {
     "prefix": "button.style",
-    "body": [
-      "button.style(${1})"
-    ]
+    "body": ["button.style(${1})"]
   },
   "button.tap": {
     "prefix": "button.tap",
-    "body": [
-      "button.tap()"
-    ]
+    "body": ["button.tap()"]
   },
   "button.longpress": {
     "prefix": "button.longpress",
-    "body": [
-      "button.longpress()"
-    ]
+    "body": ["button.longpress()"]
   },
   "button.touchstart": {
     "prefix": "button.touchstart",
@@ -1935,93 +1407,63 @@
   },
   "button.trigger": {
     "prefix": "button.trigger",
-    "body": [
-      "button.trigger(${1}, ${2})"
-    ]
+    "body": ["button.trigger(${1}, ${2})"]
   },
   "checkbox.tagName": {
     "prefix": "checkbox.tagName",
-    "body": [
-      "checkbox.tagName"
-    ]
+    "body": ["checkbox.tagName"]
   },
   "checkbox.$": {
     "prefix": "checkbox.$",
-    "body": [
-      "checkbox.$('${1}')"
-    ]
+    "body": ["checkbox.$('${1}')"]
   },
   "checkbox.$$": {
     "prefix": "checkbox.$$",
-    "body": [
-      "checkbox.$$('${1}')"
-    ]
+    "body": ["checkbox.$$('${1}')"]
   },
   "checkbox.size": {
     "prefix": "checkbox.size",
-    "body": [
-      "checkbox.size()"
-    ]
+    "body": ["checkbox.size()"]
   },
   "checkbox.offset": {
     "prefix": "checkbox.offset",
-    "body": [
-      "checkbox.offset()"
-    ]
+    "body": ["checkbox.offset()"]
   },
   "checkbox.text": {
     "prefix": "checkbox.text",
-    "body": [
-      "checkbox.text()"
-    ]
+    "body": ["checkbox.text()"]
   },
   "checkbox.attribute": {
     "prefix": "checkbox.attribute",
-    "body": [
-      "checkbox.attribute(${1})"
-    ]
+    "body": ["checkbox.attribute(${1})"]
   },
   "checkbox.property": {
     "prefix": "checkbox.property",
-    "body": [
-      "checkbox.property(${1})"
-    ]
+    "body": ["checkbox.property(${1})"]
   },
   "checkbox.wxml": {
     "prefix": "checkbox.wxml",
-    "body": [
-      "checkbox.wxml()"
-    ]
+    "body": ["checkbox.wxml()"]
   },
   "checkbox.outerWxml": {
     "prefix": "checkbox.outerWxml",
-    "body": [
-      "checkbox.outerWxml()"
-    ]
+    "body": ["checkbox.outerWxml()"]
   },
   "checkbox.value": {
     "prefix": "checkbox.value",
-    "body": [
-      "checkbox.value()"
-    ]
+    "body": ["checkbox.value()"]
   },
   "checkbox.style": {
     "prefix": "checkbox.style",
-    "body": [
-      "checkbox.style(${1})"
-    ]
+    "body": ["checkbox.style(${1})"]
   },
   "checkbox.tap": {
     "prefix": "checkbox.tap",
-    "body": [
-      "checkbox.tap()"
-    ]
+    "body": ["checkbox.tap()"]
   },
   "checkbox.longpress": {
     "prefix": "checkbox.longpress",
-    "body": [
-      "checkbox.longpress()"
-    ]
+    "body": ["checkbox.longpress()"]
   },
   "checkbox.touchstart": {
     "prefix": "checkbox.touchstart",
@@ -2052,93 +1494,63 @@
   },
   "checkbox.trigger": {
     "prefix": "checkbox.trigger",
-    "body": [
-      "checkbox.trigger(${1}, ${2})"
-    ]
+    "body": ["checkbox.trigger(${1}, ${2})"]
   },
   "checkboxGroup.tagName": {
     "prefix": "checkboxGroup.tagName",
-    "body": [
-      "checkboxGroup.tagName"
-    ]
+    "body": ["checkboxGroup.tagName"]
   },
   "checkboxGroup.$": {
     "prefix": "checkboxGroup.$",
-    "body": [
-      "checkboxGroup.$('${1}')"
-    ]
+    "body": ["checkboxGroup.$('${1}')"]
   },
   "checkboxGroup.$$": {
     "prefix": "checkboxGroup.$$",
-    "body": [
-      "checkboxGroup.$$('${1}')"
-    ]
+    "body": ["checkboxGroup.$$('${1}')"]
   },
   "checkboxGroup.size": {
     "prefix": "checkboxGroup.size",
-    "body": [
-      "checkboxGroup.size()"
-    ]
+    "body": ["checkboxGroup.size()"]
   },
   "checkboxGroup.offset": {
     "prefix": "checkboxGroup.offset",
-    "body": [
-      "checkboxGroup.offset()"
-    ]
+    "body": ["checkboxGroup.offset()"]
   },
   "checkboxGroup.text": {
     "prefix": "checkboxGroup.text",
-    "body": [
-      "checkboxGroup.text()"
-    ]
+    "body": ["checkboxGroup.text()"]
   },
   "checkboxGroup.attribute": {
     "prefix": "checkboxGroup.attribute",
-    "body": [
-      "checkboxGroup.attribute(${1})"
-    ]
+    "body": ["checkboxGroup.attribute(${1})"]
   },
   "checkboxGroup.property": {
     "prefix": "checkboxGroup.property",
-    "body": [
-      "checkboxGroup.property(${1})"
-    ]
+    "body": ["checkboxGroup.property(${1})"]
   },
   "checkboxGroup.wxml": {
     "prefix": "checkboxGroup.wxml",
-    "body": [
-      "checkboxGroup.wxml()"
-    ]
+    "body": ["checkboxGroup.wxml()"]
   },
   "checkboxGroup.outerWxml": {
     "prefix": "checkboxGroup.outerWxml",
-    "body": [
-      "checkboxGroup.outerWxml()"
-    ]
+    "body": ["checkboxGroup.outerWxml()"]
   },
   "checkboxGroup.value": {
     "prefix": "checkboxGroup.value",
-    "body": [
-      "checkboxGroup.value()"
-    ]
+    "body": ["checkboxGroup.value()"]
   },
   "checkboxGroup.style": {
     "prefix": "checkboxGroup.style",
-    "body": [
-      "checkboxGroup.style(${1})"
-    ]
+    "body": ["checkboxGroup.style(${1})"]
   },
   "checkboxGroup.tap": {
     "prefix": "checkboxGroup.tap",
-    "body": [
-      "checkboxGroup.tap()"
-    ]
+    "body": ["checkboxGroup.tap()"]
   },
   "checkboxGroup.longpress": {
     "prefix": "checkboxGroup.longpress",
-    "body": [
-      "checkboxGroup.longpress()"
-    ]
+    "body": ["checkboxGroup.longpress()"]
   },
   "checkboxGroup.touchstart": {
     "prefix": "checkboxGroup.touchstart",
@@ -2169,93 +1581,63 @@
   },
   "checkboxGroup.trigger": {
     "prefix": "checkboxGroup.trigger",
-    "body": [
-      "checkboxGroup.trigger(${1}, ${2})"
-    ]
+    "body": ["checkboxGroup.trigger(${1}, ${2})"]
   },
   "editor.tagName": {
     "prefix": "editor.tagName",
-    "body": [
-      "editor.tagName"
-    ]
+    "body": ["editor.tagName"]
   },
   "editor.$": {
     "prefix": "editor.$",
-    "body": [
-      "editor.$('${1}')"
-    ]
+    "body": ["editor.$('${1}')"]
   },
   "editor.$$": {
     "prefix": "editor.$$",
-    "body": [
-      "editor.$$('${1}')"
-    ]
+    "body": ["editor.$$('${1}')"]
   },
   "editor.size": {
     "prefix": "editor.size",
-    "body": [
-      "editor.size()"
-    ]
+    "body": ["editor.size()"]
   },
   "editor.offset": {
     "prefix": "editor.offset",
-    "body": [
-      "editor.offset()"
-    ]
+    "body": ["editor.offset()"]
   },
   "editor.text": {
     "prefix": "editor.text",
-    "body": [
-      "editor.text()"
-    ]
+    "body": ["editor.text()"]
   },
   "editor.attribute": {
     "prefix": "editor.attribute",
-    "body": [
-      "editor.attribute(${1})"
-    ]
+    "body": ["editor.attribute(${1})"]
   },
   "editor.property": {
     "prefix": "editor.property",
-    "body": [
-      "editor.property(${1})"
-    ]
+    "body": ["editor.property(${1})"]
   },
   "editor.wxml": {
     "prefix": "editor.wxml",
-    "body": [
-      "editor.wxml()"
-    ]
+    "body": ["editor.wxml()"]
   },
   "editor.outerWxml": {
     "prefix": "editor.outerWxml",
-    "body": [
-      "editor.outerWxml()"
-    ]
+    "body": ["editor.outerWxml()"]
   },
   "editor.value": {
     "prefix": "editor.value",
-    "body": [
-      "editor.value()"
-    ]
+    "body": ["editor.value()"]
   },
   "editor.style": {
     "prefix": "editor.style",
-    "body": [
-      "editor.style(${1})"
-    ]
+    "body": ["editor.style(${1})"]
   },
   "editor.tap": {
     "prefix": "editor.tap",
-    "body": [
-      "editor.tap()"
-    ]
+    "body": ["editor.tap()"]
   },
   "editor.longpress": {
     "prefix": "editor.longpress",
-    "body": [
-      "editor.longpress()"
-    ]
+    "body": ["editor.longpress()"]
   },
   "editor.touchstart": {
     "prefix": "editor.touchstart",
@@ -2286,93 +1668,63 @@
   },
   "editor.trigger": {
     "prefix": "editor.trigger",
-    "body": [
-      "editor.trigger(${1}, ${2})"
-    ]
+    "body": ["editor.trigger(${1}, ${2})"]
   },
   "form.tagName": {
     "prefix": "form.tagName",
-    "body": [
-      "form.tagName"
-    ]
+    "body": ["form.tagName"]
   },
   "form.$": {
     "prefix": "form.$",
-    "body": [
-      "form.$('${1}')"
-    ]
+    "body": ["form.$('${1}')"]
   },
   "form.$$": {
     "prefix": "form.$$",
-    "body": [
-      "form.$$('${1}')"
-    ]
+    "body": ["form.$$('${1}')"]
   },
   "form.size": {
     "prefix": "form.size",
-    "body": [
-      "form.size()"
-    ]
+    "body": ["form.size()"]
   },
   "form.offset": {
     "prefix": "form.offset",
-    "body": [
-      "form.offset()"
-    ]
+    "body": ["form.offset()"]
   },
   "form.text": {
     "prefix": "form.text",
-    "body": [
-      "form.text()"
-    ]
+    "body": ["form.text()"]
   },
   "form.attribute": {
     "prefix": "form.attribute",
-    "body": [
-      "form.attribute(${1})"
-    ]
+    "body": ["form.attribute(${1})"]
   },
   "form.property": {
     "prefix": "form.property",
-    "body": [
-      "form.property(${1})"
-    ]
+    "body": ["form.property(${1})"]
   },
   "form.wxml": {
     "prefix": "form.wxml",
-    "body": [
-      "form.wxml()"
-    ]
+    "body": ["form.wxml()"]
   },
   "form.outerWxml": {
     "prefix": "form.outerWxml",
-    "body": [
-      "form.outerWxml()"
-    ]
+    "body": ["form.outerWxml()"]
   },
   "form.value": {
     "prefix": "form.value",
-    "body": [
-      "form.value()"
-    ]
+    "body": ["form.value()"]
   },
   "form.style": {
     "prefix": "form.style",
-    "body": [
-      "form.style(${1})"
-    ]
+    "body": ["form.style(${1})"]
   },
   "form.tap": {
     "prefix": "form.tap",
-    "body": [
-      "form.tap()"
-    ]
+    "body": ["form.tap()"]
   },
   "form.longpress": {
     "prefix": "form.longpress",
-    "body": [
-      "form.longpress()"
-    ]
+    "body": ["form.longpress()"]
   },
   "form.touchstart": {
     "prefix": "form.touchstart",
@@ -2403,93 +1755,63 @@
   },
   "form.trigger": {
     "prefix": "form.trigger",
-    "body": [
-      "form.trigger(${1}, ${2})"
-    ]
+    "body": ["form.trigger(${1}, ${2})"]
   },
   "input.tagName": {
     "prefix": "input.tagName",
-    "body": [
-      "input.tagName"
-    ]
+    "body": ["input.tagName"]
   },
   "input.$": {
     "prefix": "input.$",
-    "body": [
-      "input.$('${1}')"
-    ]
+    "body": ["input.$('${1}')"]
   },
   "input.$$": {
     "prefix": "input.$$",
-    "body": [
-      "input.$$('${1}')"
-    ]
+    "body": ["input.$$('${1}')"]
   },
   "input.size": {
     "prefix": "input.size",
-    "body": [
-      "input.size()"
-    ]
+    "body": ["input.size()"]
   },
   "input.offset": {
     "prefix": "input.offset",
-    "body": [
-      "input.offset()"
-    ]
+    "body": ["input.offset()"]
   },
   "input.text": {
     "prefix": "input.text",
-    "body": [
-      "input.text()"
-    ]
+    "body": ["input.text()"]
   },
   "input.attribute": {
     "prefix": "input.attribute",
-    "body": [
-      "input.attribute(${1})"
-    ]
+    "body": ["input.attribute(${1})"]
   },
   "input.property": {
     "prefix": "input.property",
-    "body": [
-      "input.property(${1})"
-    ]
+    "body": ["input.property(${1})"]
   },
   "input.wxml": {
     "prefix": "input.wxml",
-    "body": [
-      "input.wxml()"
-    ]
+    "body": ["input.wxml()"]
   },
   "input.outerWxml": {
     "prefix": "input.outerWxml",
-    "body": [
-      "input.outerWxml()"
-    ]
+    "body": ["input.outerWxml()"]
   },
   "input.value": {
     "prefix": "input.value",
-    "body": [
-      "input.value()"
-    ]
+    "body": ["input.value()"]
   },
   "input.style": {
     "prefix": "input.style",
-    "body": [
-      "input.style(${1})"
-    ]
+    "body": ["input.style(${1})"]
   },
   "input.tap": {
     "prefix": "input.tap",
-    "body": [
-      "input.tap()"
-    ]
+    "body": ["input.tap()"]
   },
   "input.longpress": {
     "prefix": "input.longpress",
-    "body": [
-      "input.longpress()"
-    ]
+    "body": ["input.longpress()"]
   },
   "input.touchstart": {
     "prefix": "input.touchstart",
@@ -2520,99 +1842,67 @@
   },
   "input.trigger": {
     "prefix": "input.trigger",
-    "body": [
-      "input.trigger(${1}, ${2})"
-    ]
+    "body": ["input.trigger(${1}, ${2})"]
   },
   "input.input": {
     "prefix": "input.input",
-    "body": [
-      "input.input(${1})"
-    ]
+    "body": ["input.input(${1})"]
   },
   "label.tagName": {
     "prefix": "label.tagName",
-    "body": [
-      "label.tagName"
-    ]
+    "body": ["label.tagName"]
   },
   "label.$": {
     "prefix": "label.$",
-    "body": [
-      "label.$('${1}')"
-    ]
+    "body": ["label.$('${1}')"]
   },
   "label.$$": {
     "prefix": "label.$$",
-    "body": [
-      "label.$$('${1}')"
-    ]
+    "body": ["label.$$('${1}')"]
   },
   "label.size": {
     "prefix": "label.size",
-    "body": [
-      "label.size()"
-    ]
+    "body": ["label.size()"]
   },
   "label.offset": {
     "prefix": "label.offset",
-    "body": [
-      "label.offset()"
-    ]
+    "body": ["label.offset()"]
   },
   "label.text": {
     "prefix": "label.text",
-    "body": [
-      "label.text()"
-    ]
+    "body": ["label.text()"]
   },
   "label.attribute": {
     "prefix": "label.attribute",
-    "body": [
-      "label.attribute(${1})"
-    ]
+    "body": ["label.attribute(${1})"]
   },
   "label.property": {
     "prefix": "label.property",
-    "body": [
-      "label.property(${1})"
-    ]
+    "body": ["label.property(${1})"]
   },
   "label.wxml": {
     "prefix": "label.wxml",
-    "body": [
-      "label.wxml()"
-    ]
+    "body": ["label.wxml()"]
   },
   "label.outerWxml": {
     "prefix": "label.outerWxml",
-    "body": [
-      "label.outerWxml()"
-    ]
+    "body": ["label.outerWxml()"]
   },
   "label.value": {
     "prefix": "label.value",
-    "body": [
-      "label.value()"
-    ]
+    "body": ["label.value()"]
   },
   "label.style": {
     "prefix": "label.style",
-    "body": [
-      "label.style(${1})"
-    ]
+    "body": ["label.style(${1})"]
   },
   "label.tap": {
     "prefix": "label.tap",
-    "body": [
-      "label.tap()"
-    ]
+    "body": ["label.tap()"]
   },
   "label.longpress": {
     "prefix": "label.longpress",
-    "body": [
-      "label.longpress()"
-    ]
+    "body": ["label.longpress()"]
   },
   "label.touchstart": {
     "prefix": "label.touchstart",
@@ -2643,93 +1933,63 @@
   },
   "label.trigger": {
     "prefix": "label.trigger",
-    "body": [
-      "label.trigger(${1}, ${2})"
-    ]
+    "body": ["label.trigger(${1}, ${2})"]
   },
   "picker.tagName": {
     "prefix": "picker.tagName",
-    "body": [
-      "picker.tagName"
-    ]
+    "body": ["picker.tagName"]
   },
   "picker.$": {
     "prefix": "picker.$",
-    "body": [
-      "picker.$('${1}')"
-    ]
+    "body": ["picker.$('${1}')"]
   },
   "picker.$$": {
     "prefix": "picker.$$",
-    "body": [
-      "picker.$$('${1}')"
-    ]
+    "body": ["picker.$$('${1}')"]
   },
   "picker.size": {
     "prefix": "picker.size",
-    "body": [
-      "picker.size()"
-    ]
+    "body": ["picker.size()"]
   },
   "picker.offset": {
     "prefix": "picker.offset",
-    "body": [
-      "picker.offset()"
-    ]
+    "body": ["picker.offset()"]
   },
   "picker.text": {
     "prefix": "picker.text",
-    "body": [
-      "picker.text()"
-    ]
+    "body": ["picker.text()"]
   },
   "picker.attribute": {
     "prefix": "picker.attribute",
-    "body": [
-      "picker.attribute(${1})"
-    ]
+    "body": ["picker.attribute(${1})"]
   },
   "picker.property": {
     "prefix": "picker.property",
-    "body": [
-      "picker.property(${1})"
-    ]
+    "body": ["picker.property(${1})"]
   },
   "picker.wxml": {
     "prefix": "picker.wxml",
-    "body": [
-      "picker.wxml()"
-    ]
+    "body": ["picker.wxml()"]
   },
   "picker.outerWxml": {
     "prefix": "picker.outerWxml",
-    "body": [
-      "picker.outerWxml()"
-    ]
+    "body": ["picker.outerWxml()"]
   },
   "picker.value": {
     "prefix": "picker.value",
-    "body": [
-      "picker.value()"
-    ]
+    "body": ["picker.value()"]
   },
   "picker.style": {
     "prefix": "picker.style",
-    "body": [
-      "picker.style(${1})"
-    ]
+    "body": ["picker.style(${1})"]
   },
   "picker.tap": {
     "prefix": "picker.tap",
-    "body": [
-      "picker.tap()"
-    ]
+    "body": ["picker.tap()"]
   },
   "picker.longpress": {
     "prefix": "picker.longpress",
-    "body": [
-      "picker.longpress()"
-    ]
+    "body": ["picker.longpress()"]
   },
   "picker.touchstart": {
     "prefix": "picker.touchstart",
@@ -2760,93 +2020,63 @@
   },
   "picker.trigger": {
     "prefix": "picker.trigger",
-    "body": [
-      "picker.trigger(${1}, ${2})"
-    ]
+    "body": ["picker.trigger(${1}, ${2})"]
   },
   "pickerView.tagName": {
     "prefix": "pickerView.tagName",
-    "body": [
-      "pickerView.tagName"
-    ]
+    "body": ["pickerView.tagName"]
   },
   "pickerView.$": {
     "prefix": "pickerView.$",
-    "body": [
-      "pickerView.$('${1}')"
-    ]
+    "body": ["pickerView.$('${1}')"]
   },
   "pickerView.$$": {
     "prefix": "pickerView.$$",
-    "body": [
-      "pickerView.$$('${1}')"
-    ]
+    "body": ["pickerView.$$('${1}')"]
   },
   "pickerView.size": {
     "prefix": "pickerView.size",
-    "body": [
-      "pickerView.size()"
-    ]
+    "body": ["pickerView.size()"]
   },
   "pickerView.offset": {
     "prefix": "pickerView.offset",
-    "body": [
-      "pickerView.offset()"
-    ]
+    "body": ["pickerView.offset()"]
   },
   "pickerView.text": {
     "prefix": "pickerView.text",
-    "body": [
-      "pickerView.text()"
-    ]
+    "body": ["pickerView.text()"]
   },
   "pickerView.attribute": {
     "prefix": "pickerView.attribute",
-    "body": [
-      "pickerView.attribute(${1})"
-    ]
+    "body": ["pickerView.attribute(${1})"]
   },
   "pickerView.property": {
     "prefix": "pickerView.property",
-    "body": [
-      "pickerView.property(${1})"
-    ]
+    "body": ["pickerView.property(${1})"]
   },
   "pickerView.wxml": {
     "prefix": "pickerView.wxml",
-    "body": [
-      "pickerView.wxml()"
-    ]
+    "body": ["pickerView.wxml()"]
   },
   "pickerView.outerWxml": {
     "prefix": "pickerView.outerWxml",
-    "body": [
-      "pickerView.outerWxml()"
-    ]
+    "body": ["pickerView.outerWxml()"]
   },
   "pickerView.value": {
     "prefix": "pickerView.value",
-    "body": [
-      "pickerView.value()"
-    ]
+    "body": ["pickerView.value()"]
   },
   "pickerView.style": {
     "prefix": "pickerView.style",
-    "body": [
-      "pickerView.style(${1})"
-    ]
+    "body": ["pickerView.style(${1})"]
   },
   "pickerView.tap": {
     "prefix": "pickerView.tap",
-    "body": [
-      "pickerView.tap()"
-    ]
+    "body": ["pickerView.tap()"]
   },
   "pickerView.longpress": {
     "prefix": "pickerView.longpress",
-    "body": [
-      "pickerView.longpress()"
-    ]
+    "body": ["pickerView.longpress()"]
   },
   "pickerView.touchstart": {
     "prefix": "pickerView.touchstart",
@@ -2877,93 +2107,63 @@
   },
   "pickerView.trigger": {
     "prefix": "pickerView.trigger",
-    "body": [
-      "pickerView.trigger(${1}, ${2})"
-    ]
+    "body": ["pickerView.trigger(${1}, ${2})"]
   },
   "pickerViewColumn.tagName": {
     "prefix": "pickerViewColumn.tagName",
-    "body": [
-      "pickerViewColumn.tagName"
-    ]
+    "body": ["pickerViewColumn.tagName"]
   },
   "pickerViewColumn.$": {
     "prefix": "pickerViewColumn.$",
-    "body": [
-      "pickerViewColumn.$('${1}')"
-    ]
+    "body": ["pickerViewColumn.$('${1}')"]
   },
   "pickerViewColumn.$$": {
     "prefix": "pickerViewColumn.$$",
-    "body": [
-      "pickerViewColumn.$$('${1}')"
-    ]
+    "body": ["pickerViewColumn.$$('${1}')"]
   },
   "pickerViewColumn.size": {
     "prefix": "pickerViewColumn.size",
-    "body": [
-      "pickerViewColumn.size()"
-    ]
+    "body": ["pickerViewColumn.size()"]
   },
   "pickerViewColumn.offset": {
     "prefix": "pickerViewColumn.offset",
-    "body": [
-      "pickerViewColumn.offset()"
-    ]
+    "body": ["pickerViewColumn.offset()"]
   },
   "pickerViewColumn.text": {
     "prefix": "pickerViewColumn.text",
-    "body": [
-      "pickerViewColumn.text()"
-    ]
+    "body": ["pickerViewColumn.text()"]
   },
   "pickerViewColumn.attribute": {
     "prefix": "pickerViewColumn.attribute",
-    "body": [
-      "pickerViewColumn.attribute(${1})"
-    ]
+    "body": ["pickerViewColumn.attribute(${1})"]
   },
   "pickerViewColumn.property": {
     "prefix": "pickerViewColumn.property",
-    "body": [
-      "pickerViewColumn.property(${1})"
-    ]
+    "body": ["pickerViewColumn.property(${1})"]
   },
   "pickerViewColumn.wxml": {
     "prefix": "pickerViewColumn.wxml",
-    "body": [
-      "pickerViewColumn.wxml()"
-    ]
+    "body": ["pickerViewColumn.wxml()"]
   },
   "pickerViewColumn.outerWxml": {
     "prefix": "pickerViewColumn.outerWxml",
-    "body": [
-      "pickerViewColumn.outerWxml()"
-    ]
+    "body": ["pickerViewColumn.outerWxml()"]
   },
   "pickerViewColumn.value": {
     "prefix": "pickerViewColumn.value",
-    "body": [
-      "pickerViewColumn.value()"
-    ]
+    "body": ["pickerViewColumn.value()"]
   },
   "pickerViewColumn.style": {
     "prefix": "pickerViewColumn.style",
-    "body": [
-      "pickerViewColumn.style(${1})"
-    ]
+    "body": ["pickerViewColumn.style(${1})"]
   },
   "pickerViewColumn.tap": {
     "prefix": "pickerViewColumn.tap",
-    "body": [
-      "pickerViewColumn.tap()"
-    ]
+    "body": ["pickerViewColumn.tap()"]
   },
   "pickerViewColumn.longpress": {
     "prefix": "pickerViewColumn.longpress",
-    "body": [
-      "pickerViewColumn.longpress()"
-    ]
+    "body": ["pickerViewColumn.longpress()"]
   },
   "pickerViewColumn.touchstart": {
     "prefix": "pickerViewColumn.touchstart",
@@ -2994,93 +2194,63 @@
   },
   "pickerViewColumn.trigger": {
     "prefix": "pickerViewColumn.trigger",
-    "body": [
-      "pickerViewColumn.trigger(${1}, ${2})"
-    ]
+    "body": ["pickerViewColumn.trigger(${1}, ${2})"]
   },
   "radio.tagName": {
     "prefix": "radio.tagName",
-    "body": [
-      "radio.tagName"
-    ]
+    "body": ["radio.tagName"]
   },
   "radio.$": {
     "prefix": "radio.$",
-    "body": [
-      "radio.$('${1}')"
-    ]
+    "body": ["radio.$('${1}')"]
   },
   "radio.$$": {
     "prefix": "radio.$$",
-    "body": [
-      "radio.$$('${1}')"
-    ]
+    "body": ["radio.$$('${1}')"]
   },
   "radio.size": {
     "prefix": "radio.size",
-    "body": [
-      "radio.size()"
-    ]
+    "body": ["radio.size()"]
   },
   "radio.offset": {
     "prefix": "radio.offset",
-    "body": [
-      "radio.offset()"
-    ]
+    "body": ["radio.offset()"]
   },
   "radio.text": {
     "prefix": "radio.text",
-    "body": [
-      "radio.text()"
-    ]
+    "body": ["radio.text()"]
   },
   "radio.attribute": {
     "prefix": "radio.attribute",
-    "body": [
-      "radio.attribute(${1})"
-    ]
+    "body": ["radio.attribute(${1})"]
   },
   "radio.property": {
     "prefix": "radio.property",
-    "body": [
-      "radio.property(${1})"
-    ]
+    "body": ["radio.property(${1})"]
   },
   "radio.wxml": {
     "prefix": "radio.wxml",
-    "body": [
-      "radio.wxml()"
-    ]
+    "body": ["radio.wxml()"]
   },
   "radio.outerWxml": {
     "prefix": "radio.outerWxml",
-    "body": [
-      "radio.outerWxml()"
-    ]
+    "body": ["radio.outerWxml()"]
   },
   "radio.value": {
     "prefix": "radio.value",
-    "body": [
-      "radio.value()"
-    ]
+    "body": ["radio.value()"]
   },
   "radio.style": {
     "prefix": "radio.style",
-    "body": [
-      "radio.style(${1})"
-    ]
+    "body": ["radio.style(${1})"]
   },
   "radio.tap": {
     "prefix": "radio.tap",
-    "body": [
-      "radio.tap()"
-    ]
+    "body": ["radio.tap()"]
   },
   "radio.longpress": {
     "prefix": "radio.longpress",
-    "body": [
-      "radio.longpress()"
-    ]
+    "body": ["radio.longpress()"]
   },
   "radio.touchstart": {
     "prefix": "radio.touchstart",
@@ -3111,93 +2281,63 @@
   },
   "radio.trigger": {
     "prefix": "radio.trigger",
-    "body": [
-      "radio.trigger(${1}, ${2})"
-    ]
+    "body": ["radio.trigger(${1}, ${2})"]
   },
   "radioGroup.tagName": {
     "prefix": "radioGroup.tagName",
-    "body": [
-      "radioGroup.tagName"
-    ]
+    "body": ["radioGroup.tagName"]
   },
   "radioGroup.$": {
     "prefix": "radioGroup.$",
-    "body": [
-      "radioGroup.$('${1}')"
-    ]
+    "body": ["radioGroup.$('${1}')"]
   },
   "radioGroup.$$": {
     "prefix": "radioGroup.$$",
-    "body": [
-      "radioGroup.$$('${1}')"
-    ]
+    "body": ["radioGroup.$$('${1}')"]
   },
   "radioGroup.size": {
     "prefix": "radioGroup.size",
-    "body": [
-      "radioGroup.size()"
-    ]
+    "body": ["radioGroup.size()"]
   },
   "radioGroup.offset": {
     "prefix": "radioGroup.offset",
-    "body": [
-      "radioGroup.offset()"
-    ]
+    "body": ["radioGroup.offset()"]
   },
   "radioGroup.text": {
     "prefix": "radioGroup.text",
-    "body": [
-      "radioGroup.text()"
-    ]
+    "body": ["radioGroup.text()"]
   },
   "radioGroup.attribute": {
     "prefix": "radioGroup.attribute",
-    "body": [
-      "radioGroup.attribute(${1})"
-    ]
+    "body": ["radioGroup.attribute(${1})"]
   },
   "radioGroup.property": {
     "prefix": "radioGroup.property",
-    "body": [
-      "radioGroup.property(${1})"
-    ]
+    "body": ["radioGroup.property(${1})"]
   },
   "radioGroup.wxml": {
     "prefix": "radioGroup.wxml",
-    "body": [
-      "radioGroup.wxml()"
-    ]
+    "body": ["radioGroup.wxml()"]
   },
   "radioGroup.outerWxml": {
     "prefix": "radioGroup.outerWxml",
-    "body": [
-      "radioGroup.outerWxml()"
-    ]
+    "body": ["radioGroup.outerWxml()"]
   },
   "radioGroup.value": {
     "prefix": "radioGroup.value",
-    "body": [
-      "radioGroup.value()"
-    ]
+    "body": ["radioGroup.value()"]
   },
   "radioGroup.style": {
     "prefix": "radioGroup.style",
-    "body": [
-      "radioGroup.style(${1})"
-    ]
+    "body": ["radioGroup.style(${1})"]
   },
   "radioGroup.tap": {
     "prefix": "radioGroup.tap",
-    "body": [
-      "radioGroup.tap()"
-    ]
+    "body": ["radioGroup.tap()"]
   },
   "radioGroup.longpress": {
     "prefix": "radioGroup.longpress",
-    "body": [
-      "radioGroup.longpress()"
-    ]
+    "body": ["radioGroup.longpress()"]
   },
   "radioGroup.touchstart": {
     "prefix": "radioGroup.touchstart",
@@ -3228,93 +2368,63 @@
   },
   "radioGroup.trigger": {
     "prefix": "radioGroup.trigger",
-    "body": [
-      "radioGroup.trigger(${1}, ${2})"
-    ]
+    "body": ["radioGroup.trigger(${1}, ${2})"]
   },
   "slider.tagName": {
     "prefix": "slider.tagName",
-    "body": [
-      "slider.tagName"
-    ]
+    "body": ["slider.tagName"]
   },
   "slider.$": {
     "prefix": "slider.$",
-    "body": [
-      "slider.$('${1}')"
-    ]
+    "body": ["slider.$('${1}')"]
   },
   "slider.$$": {
     "prefix": "slider.$$",
-    "body": [
-      "slider.$$('${1}')"
-    ]
+    "body": ["slider.$$('${1}')"]
   },
   "slider.size": {
     "prefix": "slider.size",
-    "body": [
-      "slider.size()"
-    ]
+    "body": ["slider.size()"]
   },
   "slider.offset": {
     "prefix": "slider.offset",
-    "body": [
-      "slider.offset()"
-    ]
+    "body": ["slider.offset()"]
   },
   "slider.text": {
     "prefix": "slider.text",
-    "body": [
-      "slider.text()"
-    ]
+    "body": ["slider.text()"]
   },
   "slider.attribute": {
     "prefix": "slider.attribute",
-    "body": [
-      "slider.attribute(${1})"
-    ]
+    "body": ["slider.attribute(${1})"]
   },
   "slider.property": {
     "prefix": "slider.property",
-    "body": [
-      "slider.property(${1})"
-    ]
+    "body": ["slider.property(${1})"]
   },
   "slider.wxml": {
     "prefix": "slider.wxml",
-    "body": [
-      "slider.wxml()"
-    ]
+    "body": ["slider.wxml()"]
   },
   "slider.outerWxml": {
     "prefix": "slider.outerWxml",
-    "body": [
-      "slider.outerWxml()"
-    ]
+    "body": ["slider.outerWxml()"]
   },
   "slider.value": {
     "prefix": "slider.value",
-    "body": [
-      "slider.value()"
-    ]
+    "body": ["slider.value()"]
   },
   "slider.style": {
     "prefix": "slider.style",
-    "body": [
-      "slider.style(${1})"
-    ]
+    "body": ["slider.style(${1})"]
   },
   "slider.tap": {
     "prefix": "slider.tap",
-    "body": [
-      "slider.tap()"
-    ]
+    "body": ["slider.tap()"]
   },
   "slider.longpress": {
     "prefix": "slider.longpress",
-    "body": [
-      "slider.longpress()"
-    ]
+    "body": ["slider.longpress()"]
   },
   "slider.touchstart": {
     "prefix": "slider.touchstart",
@@ -3345,99 +2455,67 @@
   },
   "slider.trigger": {
     "prefix": "slider.trigger",
-    "body": [
-      "slider.trigger(${1}, ${2})"
-    ]
+    "body": ["slider.trigger(${1}, ${2})"]
   },
   "slider.slideTo": {
     "prefix": "slider.slideTo",
-    "body": [
-      "slider.slideTo(${1})"
-    ]
+    "body": ["slider.slideTo(${1})"]
   },
   "switch.tagName": {
     "prefix": "switch.tagName",
-    "body": [
-      "switch.tagName"
-    ]
+    "body": ["switch.tagName"]
   },
   "switch.$": {
     "prefix": "switch.$",
-    "body": [
-      "switch.$('${1}')"
-    ]
+    "body": ["switch.$('${1}')"]
   },
   "switch.$$": {
     "prefix": "switch.$$",
-    "body": [
-      "switch.$$('${1}')"
-    ]
+    "body": ["switch.$$('${1}')"]
   },
   "switch.size": {
     "prefix": "switch.size",
-    "body": [
-      "switch.size()"
-    ]
+    "body": ["switch.size()"]
   },
   "switch.offset": {
     "prefix": "switch.offset",
-    "body": [
-      "switch.offset()"
-    ]
+    "body": ["switch.offset()"]
   },
   "switch.text": {
     "prefix": "switch.text",
-    "body": [
-      "switch.text()"
-    ]
+    "body": ["switch.text()"]
   },
   "switch.attribute": {
     "prefix": "switch.attribute",
-    "body": [
-      "switch.attribute(${1})"
-    ]
+    "body": ["switch.attribute(${1})"]
   },
   "switch.property": {
     "prefix": "switch.property",
-    "body": [
-      "switch.property(${1})"
-    ]
+    "body": ["switch.property(${1})"]
   },
   "switch.wxml": {
     "prefix": "switch.wxml",
-    "body": [
-      "switch.wxml()"
-    ]
+    "body": ["switch.wxml()"]
   },
   "switch.outerWxml": {
     "prefix": "switch.outerWxml",
-    "body": [
-      "switch.outerWxml()"
-    ]
+    "body": ["switch.outerWxml()"]
   },
   "switch.value": {
     "prefix": "switch.value",
-    "body": [
-      "switch.value()"
-    ]
+    "body": ["switch.value()"]
   },
   "switch.style": {
     "prefix": "switch.style",
-    "body": [
-      "switch.style(${1})"
-    ]
+    "body": ["switch.style(${1})"]
   },
   "switch.tap": {
     "prefix": "switch.tap",
-    "body": [
-      "switch.tap()"
-    ]
+    "body": ["switch.tap()"]
   },
   "switch.longpress": {
     "prefix": "switch.longpress",
-    "body": [
-      "switch.longpress()"
-    ]
+    "body": ["switch.longpress()"]
   },
   "switch.touchstart": {
     "prefix": "switch.touchstart",
@@ -3468,93 +2546,63 @@
   },
   "switch.trigger": {
     "prefix": "switch.trigger",
-    "body": [
-      "switch.trigger(${1}, ${2})"
-    ]
+    "body": ["switch.trigger(${1}, ${2})"]
   },
   "textarea.tagName": {
     "prefix": "textarea.tagName",
-    "body": [
-      "textarea.tagName"
-    ]
+    "body": ["textarea.tagName"]
   },
   "textarea.$": {
     "prefix": "textarea.$",
-    "body": [
-      "textarea.$('${1}')"
-    ]
+    "body": ["textarea.$('${1}')"]
   },
   "textarea.$$": {
     "prefix": "textarea.$$",
-    "body": [
-      "textarea.$$('${1}')"
-    ]
+    "body": ["textarea.$$('${1}')"]
   },
   "textarea.size": {
     "prefix": "textarea.size",
-    "body": [
-      "textarea.size()"
-    ]
+    "body": ["textarea.size()"]
   },
   "textarea.offset": {
     "prefix": "textarea.offset",
-    "body": [
-      "textarea.offset()"
-    ]
+    "body": ["textarea.offset()"]
   },
   "textarea.text": {
     "prefix": "textarea.text",
-    "body": [
-      "textarea.text()"
-    ]
+    "body": ["textarea.text()"]
   },
   "textarea.attribute": {
     "prefix": "textarea.attribute",
-    "body": [
-      "textarea.attribute(${1})"
-    ]
+    "body": ["textarea.attribute(${1})"]
   },
   "textarea.property": {
     "prefix": "textarea.property",
-    "body": [
-      "textarea.property(${1})"
-    ]
+    "body": ["textarea.property(${1})"]
   },
   "textarea.wxml": {
     "prefix": "textarea.wxml",
-    "body": [
-      "textarea.wxml()"
-    ]
+    "body": ["textarea.wxml()"]
   },
   "textarea.outerWxml": {
     "prefix": "textarea.outerWxml",
-    "body": [
-      "textarea.outerWxml()"
-    ]
+    "body": ["textarea.outerWxml()"]
   },
   "textarea.value": {
     "prefix": "textarea.value",
-    "body": [
-      "textarea.value()"
-    ]
+    "body": ["textarea.value()"]
   },
   "textarea.style": {
     "prefix": "textarea.style",
-    "body": [
-      "textarea.style(${1})"
-    ]
+    "body": ["textarea.style(${1})"]
   },
   "textarea.tap": {
     "prefix": "textarea.tap",
-    "body": [
-      "textarea.tap()"
-    ]
+    "body": ["textarea.tap()"]
   },
   "textarea.longpress": {
     "prefix": "textarea.longpress",
-    "body": [
-      "textarea.longpress()"
-    ]
+    "body": ["textarea.longpress()"]
   },
   "textarea.touchstart": {
     "prefix": "textarea.touchstart",
@@ -3585,99 +2633,67 @@
   },
   "textarea.trigger": {
     "prefix": "textarea.trigger",
-    "body": [
-      "textarea.trigger(${1}, ${2})"
-    ]
+    "body": ["textarea.trigger(${1}, ${2})"]
   },
   "textarea.input": {
     "prefix": "textarea.input",
-    "body": [
-      "textarea.input(${1})"
-    ]
+    "body": ["textarea.input(${1})"]
   },
   "navigator.tagName": {
     "prefix": "navigator.tagName",
-    "body": [
-      "navigator.tagName"
-    ]
+    "body": ["navigator.tagName"]
   },
   "navigator.$": {
     "prefix": "navigator.$",
-    "body": [
-      "navigator.$('${1}')"
-    ]
+    "body": ["navigator.$('${1}')"]
   },
   "navigator.$$": {
     "prefix": "navigator.$$",
-    "body": [
-      "navigator.$$('${1}')"
-    ]
+    "body": ["navigator.$$('${1}')"]
   },
   "navigator.size": {
     "prefix": "navigator.size",
-    "body": [
-      "navigator.size()"
-    ]
+    "body": ["navigator.size()"]
   },
   "navigator.offset": {
     "prefix": "navigator.offset",
-    "body": [
-      "navigator.offset()"
-    ]
+    "body": ["navigator.offset()"]
   },
   "navigator.text": {
     "prefix": "navigator.text",
-    "body": [
-      "navigator.text()"
-    ]
+    "body": ["navigator.text()"]
   },
   "navigator.attribute": {
     "prefix": "navigator.attribute",
-    "body": [
-      "navigator.attribute(${1})"
-    ]
+    "body": ["navigator.attribute(${1})"]
   },
   "navigator.property": {
     "prefix": "navigator.property",
-    "body": [
-      "navigator.property(${1})"
-    ]
+    "body": ["navigator.property(${1})"]
   },
   "navigator.wxml": {
     "prefix": "navigator.wxml",
-    "body": [
-      "navigator.wxml()"
-    ]
+    "body": ["navigator.wxml()"]
   },
   "navigator.outerWxml": {
     "prefix": "navigator.outerWxml",
-    "body": [
-      "navigator.outerWxml()"
-    ]
+    "body": ["navigator.outerWxml()"]
   },
   "navigator.value": {
     "prefix": "navigator.value",
-    "body": [
-      "navigator.value()"
-    ]
+    "body": ["navigator.value()"]
   },
   "navigator.style": {
     "prefix": "navigator.style",
-    "body": [
-      "navigator.style(${1})"
-    ]
+    "body": ["navigator.style(${1})"]
   },
   "navigator.tap": {
     "prefix": "navigator.tap",
-    "body": [
-      "navigator.tap()"
-    ]
+    "body": ["navigator.tap()"]
   },
   "navigator.longpress": {
     "prefix": "navigator.longpress",
-    "body": [
-      "navigator.longpress()"
-    ]
+    "body": ["navigator.longpress()"]
   },
   "navigator.touchstart": {
     "prefix": "navigator.touchstart",
@@ -3708,93 +2724,63 @@
   },
   "navigator.trigger": {
     "prefix": "navigator.trigger",
-    "body": [
-      "navigator.trigger(${1}, ${2})"
-    ]
+    "body": ["navigator.trigger(${1}, ${2})"]
   },
   "audio.tagName": {
     "prefix": "audio.tagName",
-    "body": [
-      "audio.tagName"
-    ]
+    "body": ["audio.tagName"]
   },
   "audio.$": {
     "prefix": "audio.$",
-    "body": [
-      "audio.$('${1}')"
-    ]
+    "body": ["audio.$('${1}')"]
   },
   "audio.$$": {
     "prefix": "audio.$$",
-    "body": [
-      "audio.$$('${1}')"
-    ]
+    "body": ["audio.$$('${1}')"]
   },
   "audio.size": {
     "prefix": "audio.size",
-    "body": [
-      "audio.size()"
-    ]
+    "body": ["audio.size()"]
   },
   "audio.offset": {
     "prefix": "audio.offset",
-    "body": [
-      "audio.offset()"
-    ]
+    "body": ["audio.offset()"]
   },
   "audio.text": {
     "prefix": "audio.text",
-    "body": [
-      "audio.text()"
-    ]
+    "body": ["audio.text()"]
   },
   "audio.attribute": {
     "prefix": "audio.attribute",
-    "body": [
-      "audio.attribute(${1})"
-    ]
+    "body": ["audio.attribute(${1})"]
   },
   "audio.property": {
     "prefix": "audio.property",
-    "body": [
-      "audio.property(${1})"
-    ]
+    "body": ["audio.property(${1})"]
   },
   "audio.wxml": {
     "prefix": "audio.wxml",
-    "body": [
-      "audio.wxml()"
-    ]
+    "body": ["audio.wxml()"]
   },
   "audio.outerWxml": {
     "prefix": "audio.outerWxml",
-    "body": [
-      "audio.outerWxml()"
-    ]
+    "body": ["audio.outerWxml()"]
   },
   "audio.value": {
     "prefix": "audio.value",
-    "body": [
-      "audio.value()"
-    ]
+    "body": ["audio.value()"]
   },
   "audio.style": {
     "prefix": "audio.style",
-    "body": [
-      "audio.style(${1})"
-    ]
+    "body": ["audio.style(${1})"]
   },
   "audio.tap": {
     "prefix": "audio.tap",
-    "body": [
-      "audio.tap()"
-    ]
+    "body": ["audio.tap()"]
   },
   "audio.longpress": {
     "prefix": "audio.longpress",
-    "body": [
-      "audio.longpress()"
-    ]
+    "body": ["audio.longpress()"]
   },
   "audio.touchstart": {
     "prefix": "audio.touchstart",
@@ -3825,93 +2811,63 @@
   },
   "audio.trigger": {
     "prefix": "audio.trigger",
-    "body": [
-      "audio.trigger(${1}, ${2})"
-    ]
+    "body": ["audio.trigger(${1}, ${2})"]
   },
   "camera.tagName": {
     "prefix": "camera.tagName",
-    "body": [
-      "camera.tagName"
-    ]
+    "body": ["camera.tagName"]
   },
   "camera.$": {
     "prefix": "camera.$",
-    "body": [
-      "camera.$('${1}')"
-    ]
+    "body": ["camera.$('${1}')"]
   },
   "camera.$$": {
     "prefix": "camera.$$",
-    "body": [
-      "camera.$$('${1}')"
-    ]
+    "body": ["camera.$$('${1}')"]
   },
   "camera.size": {
     "prefix": "camera.size",
-    "body": [
-      "camera.size()"
-    ]
+    "body": ["camera.size()"]
   },
   "camera.offset": {
     "prefix": "camera.offset",
-    "body": [
-      "camera.offset()"
-    ]
+    "body": ["camera.offset()"]
   },
   "camera.text": {
     "prefix": "camera.text",
-    "body": [
-      "camera.text()"
-    ]
+    "body": ["camera.text()"]
   },
   "camera.attribute": {
     "prefix": "camera.attribute",
-    "body": [
-      "camera.attribute(${1})"
-    ]
+    "body": ["camera.attribute(${1})"]
   },
   "camera.property": {
     "prefix": "camera.property",
-    "body": [
-      "camera.property(${1})"
-    ]
+    "body": ["camera.property(${1})"]
   },
   "camera.wxml": {
     "prefix": "camera.wxml",
-    "body": [
-      "camera.wxml()"
-    ]
+    "body": ["camera.wxml()"]
   },
   "camera.outerWxml": {
     "prefix": "camera.outerWxml",
-    "body": [
-      "camera.outerWxml()"
-    ]
+    "body": ["camera.outerWxml()"]
   },
   "camera.value": {
     "prefix": "camera.value",
-    "body": [
-      "camera.value()"
-    ]
+    "body": ["camera.value()"]
   },
   "camera.style": {
     "prefix": "camera.style",
-    "body": [
-      "camera.style(${1})"
-    ]
+    "body": ["camera.style(${1})"]
   },
   "camera.tap": {
     "prefix": "camera.tap",
-    "body": [
-      "camera.tap()"
-    ]
+    "body": ["camera.tap()"]
   },
   "camera.longpress": {
     "prefix": "camera.longpress",
-    "body": [
-      "camera.longpress()"
-    ]
+    "body": ["camera.longpress()"]
   },
   "camera.touchstart": {
     "prefix": "camera.touchstart",
@@ -3942,93 +2898,63 @@
   },
   "camera.trigger": {
     "prefix": "camera.trigger",
-    "body": [
-      "camera.trigger(${1}, ${2})"
-    ]
+    "body": ["camera.trigger(${1}, ${2})"]
   },
   "image.tagName": {
     "prefix": "image.tagName",
-    "body": [
-      "image.tagName"
-    ]
+    "body": ["image.tagName"]
   },
   "image.$": {
     "prefix": "image.$",
-    "body": [
-      "image.$('${1}')"
-    ]
+    "body": ["image.$('${1}')"]
   },
   "image.$$": {
     "prefix": "image.$$",
-    "body": [
-      "image.$$('${1}')"
-    ]
+    "body": ["image.$$('${1}')"]
   },
   "image.size": {
     "prefix": "image.size",
-    "body": [
-      "image.size()"
-    ]
+    "body": ["image.size()"]
   },
   "image.offset": {
     "prefix": "image.offset",
-    "body": [
-      "image.offset()"
-    ]
+    "body": ["image.offset()"]
   },
   "image.text": {
     "prefix": "image.text",
-    "body": [
-      "image.text()"
-    ]
+    "body": ["image.text()"]
   },
   "image.attribute": {
     "prefix": "image.attribute",
-    "body": [
-      "image.attribute(${1})"
-    ]
+    "body": ["image.attribute(${1})"]
   },
   "image.property": {
     "prefix": "image.property",
-    "body": [
-      "image.property(${1})"
-    ]
+    "body": ["image.property(${1})"]
   },
   "image.wxml": {
     "prefix": "image.wxml",
-    "body": [
-      "image.wxml()"
-    ]
+    "body": ["image.wxml()"]
   },
   "image.outerWxml": {
     "prefix": "image.outerWxml",
-    "body": [
-      "image.outerWxml()"
-    ]
+    "body": ["image.outerWxml()"]
   },
   "image.value": {
     "prefix": "image.value",
-    "body": [
-      "image.value()"
-    ]
+    "body": ["image.value()"]
   },
   "image.style": {
     "prefix": "image.style",
-    "body": [
-      "image.style(${1})"
-    ]
+    "body": ["image.style(${1})"]
   },
   "image.tap": {
     "prefix": "image.tap",
-    "body": [
-      "image.tap()"
-    ]
+    "body": ["image.tap()"]
   },
   "image.longpress": {
     "prefix": "image.longpress",
-    "body": [
-      "image.longpress()"
-    ]
+    "body": ["image.longpress()"]
   },
   "image.touchstart": {
     "prefix": "image.touchstart",
@@ -4059,93 +2985,63 @@
   },
   "image.trigger": {
     "prefix": "image.trigger",
-    "body": [
-      "image.trigger(${1}, ${2})"
-    ]
+    "body": ["image.trigger(${1}, ${2})"]
   },
   "livePlayer.tagName": {
     "prefix": "livePlayer.tagName",
-    "body": [
-      "livePlayer.tagName"
-    ]
+    "body": ["livePlayer.tagName"]
   },
   "livePlayer.$": {
     "prefix": "livePlayer.$",
-    "body": [
-      "livePlayer.$('${1}')"
-    ]
+    "body": ["livePlayer.$('${1}')"]
   },
   "livePlayer.$$": {
     "prefix": "livePlayer.$$",
-    "body": [
-      "livePlayer.$$('${1}')"
-    ]
+    "body": ["livePlayer.$$('${1}')"]
   },
   "livePlayer.size": {
     "prefix": "livePlayer.size",
-    "body": [
-      "livePlayer.size()"
-    ]
+    "body": ["livePlayer.size()"]
   },
   "livePlayer.offset": {
     "prefix": "livePlayer.offset",
-    "body": [
-      "livePlayer.offset()"
-    ]
+    "body": ["livePlayer.offset()"]
   },
   "livePlayer.text": {
     "prefix": "livePlayer.text",
-    "body": [
-      "livePlayer.text()"
-    ]
+    "body": ["livePlayer.text()"]
   },
   "livePlayer.attribute": {
     "prefix": "livePlayer.attribute",
-    "body": [
-      "livePlayer.attribute(${1})"
-    ]
+    "body": ["livePlayer.attribute(${1})"]
   },
   "livePlayer.property": {
     "prefix": "livePlayer.property",
-    "body": [
-      "livePlayer.property(${1})"
-    ]
+    "body": ["livePlayer.property(${1})"]
   },
   "livePlayer.wxml": {
     "prefix": "livePlayer.wxml",
-    "body": [
-      "livePlayer.wxml()"
-    ]
+    "body": ["livePlayer.wxml()"]
   },
   "livePlayer.outerWxml": {
     "prefix": "livePlayer.outerWxml",
-    "body": [
-      "livePlayer.outerWxml()"
-    ]
+    "body": ["livePlayer.outerWxml()"]
   },
   "livePlayer.value": {
     "prefix": "livePlayer.value",
-    "body": [
-      "livePlayer.value()"
-    ]
+    "body": ["livePlayer.value()"]
   },
   "livePlayer.style": {
     "prefix": "livePlayer.style",
-    "body": [
-      "livePlayer.style(${1})"
-    ]
+    "body": ["livePlayer.style(${1})"]
   },
   "livePlayer.tap": {
     "prefix": "livePlayer.tap",
-    "body": [
-      "livePlayer.tap()"
-    ]
+    "body": ["livePlayer.tap()"]
   },
   "livePlayer.longpress": {
     "prefix": "livePlayer.longpress",
-    "body": [
-      "livePlayer.longpress()"
-    ]
+    "body": ["livePlayer.longpress()"]
   },
   "livePlayer.touchstart": {
     "prefix": "livePlayer.touchstart",
@@ -4176,93 +3072,63 @@
   },
   "livePlayer.trigger": {
     "prefix": "livePlayer.trigger",
-    "body": [
-      "livePlayer.trigger(${1}, ${2})"
-    ]
+    "body": ["livePlayer.trigger(${1}, ${2})"]
   },
   "livePusher.tagName": {
     "prefix": "livePusher.tagName",
-    "body": [
-      "livePusher.tagName"
-    ]
+    "body": ["livePusher.tagName"]
   },
   "livePusher.$": {
     "prefix": "livePusher.$",
-    "body": [
-      "livePusher.$('${1}')"
-    ]
+    "body": ["livePusher.$('${1}')"]
   },
   "livePusher.$$": {
     "prefix": "livePusher.$$",
-    "body": [
-      "livePusher.$$('${1}')"
-    ]
+    "body": ["livePusher.$$('${1}')"]
   },
   "livePusher.size": {
     "prefix": "livePusher.size",
-    "body": [
-      "livePusher.size()"
-    ]
+    "body": ["livePusher.size()"]
   },
   "livePusher.offset": {
     "prefix": "livePusher.offset",
-    "body": [
-      "livePusher.offset()"
-    ]
+    "body": ["livePusher.offset()"]
   },
   "livePusher.text": {
     "prefix": "livePusher.text",
-    "body": [
-      "livePusher.text()"
-    ]
+    "body": ["livePusher.text()"]
   },
   "livePusher.attribute": {
     "prefix": "livePusher.attribute",
-    "body": [
-      "livePusher.attribute(${1})"
-    ]
+    "body": ["livePusher.attribute(${1})"]
   },
   "livePusher.property": {
     "prefix": "livePusher.property",
-    "body": [
-      "livePusher.property(${1})"
-    ]
+    "body": ["livePusher.property(${1})"]
   },
   "livePusher.wxml": {
     "prefix": "livePusher.wxml",
-    "body": [
-      "livePusher.wxml()"
-    ]
+    "body": ["livePusher.wxml()"]
   },
   "livePusher.outerWxml": {
     "prefix": "livePusher.outerWxml",
-    "body": [
-      "livePusher.outerWxml()"
-    ]
+    "body": ["livePusher.outerWxml()"]
   },
   "livePusher.value": {
     "prefix": "livePusher.value",
-    "body": [
-      "livePusher.value()"
-    ]
+    "body": ["livePusher.value()"]
   },
   "livePusher.style": {
     "prefix": "livePusher.style",
-    "body": [
-      "livePusher.style(${1})"
-    ]
+    "body": ["livePusher.style(${1})"]
   },
   "livePusher.tap": {
     "prefix": "livePusher.tap",
-    "body": [
-      "livePusher.tap()"
-    ]
+    "body": ["livePusher.tap()"]
   },
   "livePusher.longpress": {
     "prefix": "livePusher.longpress",
-    "body": [
-      "livePusher.longpress()"
-    ]
+    "body": ["livePusher.longpress()"]
   },
   "livePusher.touchstart": {
     "prefix": "livePusher.touchstart",
@@ -4293,93 +3159,63 @@
   },
   "livePusher.trigger": {
     "prefix": "livePusher.trigger",
-    "body": [
-      "livePusher.trigger(${1}, ${2})"
-    ]
+    "body": ["livePusher.trigger(${1}, ${2})"]
   },
   "video.tagName": {
     "prefix": "video.tagName",
-    "body": [
-      "video.tagName"
-    ]
+    "body": ["video.tagName"]
   },
   "video.$": {
     "prefix": "video.$",
-    "body": [
-      "video.$('${1}')"
-    ]
+    "body": ["video.$('${1}')"]
   },
   "video.$$": {
     "prefix": "video.$$",
-    "body": [
-      "video.$$('${1}')"
-    ]
+    "body": ["video.$$('${1}')"]
   },
   "video.size": {
     "prefix": "video.size",
-    "body": [
-      "video.size()"
-    ]
+    "body": ["video.size()"]
   },
   "video.offset": {
     "prefix": "video.offset",
-    "body": [
-      "video.offset()"
-    ]
+    "body": ["video.offset()"]
   },
   "video.text": {
     "prefix": "video.text",
-    "body": [
-      "video.text()"
-    ]
+    "body": ["video.text()"]
   },
   "video.attribute": {
     "prefix": "video.attribute",
-    "body": [
-      "video.attribute(${1})"
-    ]
+    "body": ["video.attribute(${1})"]
   },
   "video.property": {
     "prefix": "video.property",
-    "body": [
-      "video.property(${1})"
-    ]
+    "body": ["video.property(${1})"]
   },
   "video.wxml": {
     "prefix": "video.wxml",
-    "body": [
-      "video.wxml()"
-    ]
+    "body": ["video.wxml()"]
   },
   "video.outerWxml": {
     "prefix": "video.outerWxml",
-    "body": [
-      "video.outerWxml()"
-    ]
+    "body": ["video.outerWxml()"]
   },
   "video.value": {
     "prefix": "video.value",
-    "body": [
-      "video.value()"
-    ]
+    "body": ["video.value()"]
   },
   "video.style": {
     "prefix": "video.style",
-    "body": [
-      "video.style(${1})"
-    ]
+    "body": ["video.style(${1})"]
   },
   "video.tap": {
     "prefix": "video.tap",
-    "body": [
-      "video.tap()"
-    ]
+    "body": ["video.tap()"]
   },
   "video.longpress": {
     "prefix": "video.longpress",
-    "body": [
-      "video.longpress()"
-    ]
+    "body": ["video.longpress()"]
   },
   "video.touchstart": {
     "prefix": "video.touchstart",
@@ -4410,99 +3246,67 @@
   },
   "video.trigger": {
     "prefix": "video.trigger",
-    "body": [
-      "video.trigger(${1}, ${2})"
-    ]
+    "body": ["video.trigger(${1}, ${2})"]
   },
   "video.callContextMethod": {
     "prefix": "video.callContextMethod",
-    "body": [
-      "video.callContextMethod(${1}, ${2})"
-    ]
+    "body": ["video.callContextMethod(${1}, ${2})"]
   },
   "map.tagName": {
     "prefix": "map.tagName",
-    "body": [
-      "map.tagName"
-    ]
+    "body": ["map.tagName"]
   },
   "map.$": {
     "prefix": "map.$",
-    "body": [
-      "map.$('${1}')"
-    ]
+    "body": ["map.$('${1}')"]
   },
   "map.$$": {
     "prefix": "map.$$",
-    "body": [
-      "map.$$('${1}')"
-    ]
+    "body": ["map.$$('${1}')"]
   },
   "map.size": {
     "prefix": "map.size",
-    "body": [
-      "map.size()"
-    ]
+    "body": ["map.size()"]
   },
   "map.offset": {
     "prefix": "map.offset",
-    "body": [
-      "map.offset()"
-    ]
+    "body": ["map.offset()"]
   },
   "map.text": {
     "prefix": "map.text",
-    "body": [
-      "map.text()"
-    ]
+    "body": ["map.text()"]
   },
   "map.attribute": {
     "prefix": "map.attribute",
-    "body": [
-      "map.attribute(${1})"
-    ]
+    "body": ["map.attribute(${1})"]
   },
   "map.property": {
     "prefix": "map.property",
-    "body": [
-      "map.property(${1})"
-    ]
+    "body": ["map.property(${1})"]
   },
   "map.wxml": {
     "prefix": "map.wxml",
-    "body": [
-      "map.wxml()"
-    ]
+    "body": ["map.wxml()"]
   },
   "map.outerWxml": {
     "prefix": "map.outerWxml",
-    "body": [
-      "map.outerWxml()"
-    ]
+    "body": ["map.outerWxml()"]
   },
   "map.value": {
     "prefix": "map.value",
-    "body": [
-      "map.value()"
-    ]
+    "body": ["map.value()"]
   },
   "map.style": {
     "prefix": "map.style",
-    "body": [
-      "map.style(${1})"
-    ]
+    "body": ["map.style(${1})"]
   },
   "map.tap": {
     "prefix": "map.tap",
-    "body": [
-      "map.tap()"
-    ]
+    "body": ["map.tap()"]
   },
   "map.longpress": {
     "prefix": "map.longpress",
-    "body": [
-      "map.longpress()"
-    ]
+    "body": ["map.longpress()"]
   },
   "map.touchstart": {
     "prefix": "map.touchstart",
@@ -4533,93 +3337,63 @@
   },
   "map.trigger": {
     "prefix": "map.trigger",
-    "body": [
-      "map.trigger(${1}, ${2})"
-    ]
+    "body": ["map.trigger(${1}, ${2})"]
   },
   "canvas.tagName": {
     "prefix": "canvas.tagName",
-    "body": [
-      "canvas.tagName"
-    ]
+    "body": ["canvas.tagName"]
   },
   "canvas.$": {
     "prefix": "canvas.$",
-    "body": [
-      "canvas.$('${1}')"
-    ]
+    "body": ["canvas.$('${1}')"]
   },
   "canvas.$$": {
     "prefix": "canvas.$$",
-    "body": [
-      "canvas.$$('${1}')"
-    ]
+    "body": ["canvas.$$('${1}')"]
   },
   "canvas.size": {
     "prefix": "canvas.size",
-    "body": [
-      "canvas.size()"
-    ]
+    "body": ["canvas.size()"]
   },
   "canvas.offset": {
     "prefix": "canvas.offset",
-    "body": [
-      "canvas.offset()"
-    ]
+    "body": ["canvas.offset()"]
   },
   "canvas.text": {
     "prefix": "canvas.text",
-    "body": [
-      "canvas.text()"
-    ]
+    "body": ["canvas.text()"]
   },
   "canvas.attribute": {
     "prefix": "canvas.attribute",
-    "body": [
-      "canvas.attribute(${1})"
-    ]
+    "body": ["canvas.attribute(${1})"]
   },
   "canvas.property": {
     "prefix": "canvas.property",
-    "body": [
-      "canvas.property(${1})"
-    ]
+    "body": ["canvas.property(${1})"]
   },
   "canvas.wxml": {
     "prefix": "canvas.wxml",
-    "body": [
-      "canvas.wxml()"
-    ]
+    "body": ["canvas.wxml()"]
   },
   "canvas.outerWxml": {
     "prefix": "canvas.outerWxml",
-    "body": [
-      "canvas.outerWxml()"
-    ]
+    "body": ["canvas.outerWxml()"]
   },
   "canvas.value": {
     "prefix": "canvas.value",
-    "body": [
-      "canvas.value()"
-    ]
+    "body": ["canvas.value()"]
   },
   "canvas.style": {
     "prefix": "canvas.style",
-    "body": [
-      "canvas.style(${1})"
-    ]
+    "body": ["canvas.style(${1})"]
   },
   "canvas.tap": {
     "prefix": "canvas.tap",
-    "body": [
-      "canvas.tap()"
-    ]
+    "body": ["canvas.tap()"]
   },
   "canvas.longpress": {
     "prefix": "canvas.longpress",
-    "body": [
-      "canvas.longpress()"
-    ]
+    "body": ["canvas.longpress()"]
   },
   "canvas.touchstart": {
     "prefix": "canvas.touchstart",
@@ -4650,93 +3424,63 @@
   },
   "canvas.trigger": {
     "prefix": "canvas.trigger",
-    "body": [
-      "canvas.trigger(${1}, ${2})"
-    ]
+    "body": ["canvas.trigger(${1}, ${2})"]
   },
   "webView.tagName": {
     "prefix": "webView.tagName",
-    "body": [
-      "webView.tagName"
-    ]
+    "body": ["webView.tagName"]
   },
   "webView.$": {
     "prefix": "webView.$",
-    "body": [
-      "webView.$('${1}')"
-    ]
+    "body": ["webView.$('${1}')"]
   },
   "webView.$$": {
     "prefix": "webView.$$",
-    "body": [
-      "webView.$$('${1}')"
-    ]
+    "body": ["webView.$$('${1}')"]
   },
   "webView.size": {
     "prefix": "webView.size",
-    "body": [
-      "webView.size()"
-    ]
+    "body": ["webView.size()"]
   },
   "webView.offset": {
     "prefix": "webView.offset",
-    "body": [
-      "webView.offset()"
-    ]
+    "body": ["webView.offset()"]
   },
   "webView.text": {
     "prefix": "webView.text",
-    "body": [
-      "webView.text()"
-    ]
+    "body": ["webView.text()"]
   },
   "webView.attribute": {
     "prefix": "webView.attribute",
-    "body": [
-      "webView.attribute(${1})"
-    ]
+    "body": ["webView.attribute(${1})"]
   },
   "webView.property": {
     "prefix": "webView.property",
-    "body": [
-      "webView.property(${1})"
-    ]
+    "body": ["webView.property(${1})"]
   },
   "webView.wxml": {
     "prefix": "webView.wxml",
-    "body": [
-      "webView.wxml()"
-    ]
+    "body": ["webView.wxml()"]
   },
   "webView.outerWxml": {
     "prefix": "webView.outerWxml",
-    "body": [
-      "webView.outerWxml()"
-    ]
+    "body": ["webView.outerWxml()"]
   },
   "webView.value": {
     "prefix": "webView.value",
-    "body": [
-      "webView.value()"
-    ]
+    "body": ["webView.value()"]
   },
   "webView.style": {
     "prefix": "webView.style",
-    "body": [
-      "webView.style(${1})"
-    ]
+    "body": ["webView.style(${1})"]
   },
   "webView.tap": {
     "prefix": "webView.tap",
-    "body": [
-      "webView.tap()"
-    ]
+    "body": ["webView.tap()"]
   },
   "webView.longpress": {
     "prefix": "webView.longpress",
-    "body": [
-      "webView.longpress()"
-    ]
+    "body": ["webView.longpress()"]
   },
   "webView.touchstart": {
     "prefix": "webView.touchstart",
@@ -4767,93 +3511,63 @@
   },
   "webView.trigger": {
     "prefix": "webView.trigger",
-    "body": [
-      "webView.trigger(${1}, ${2})"
-    ]
+    "body": ["webView.trigger(${1}, ${2})"]
   },
   "ad.tagName": {
     "prefix": "ad.tagName",
-    "body": [
-      "ad.tagName"
-    ]
+    "body": ["ad.tagName"]
   },
   "ad.$": {
     "prefix": "ad.$",
-    "body": [
-      "ad.$('${1}')"
-    ]
+    "body": ["ad.$('${1}')"]
   },
   "ad.$$": {
     "prefix": "ad.$$",
-    "body": [
-      "ad.$$('${1}')"
-    ]
+    "body": ["ad.$$('${1}')"]
   },
   "ad.size": {
     "prefix": "ad.size",
-    "body": [
-      "ad.size()"
-    ]
+    "body": ["ad.size()"]
   },
   "ad.offset": {
     "prefix": "ad.offset",
-    "body": [
-      "ad.offset()"
-    ]
+    "body": ["ad.offset()"]
   },
   "ad.text": {
     "prefix": "ad.text",
-    "body": [
-      "ad.text()"
-    ]
+    "body": ["ad.text()"]
   },
   "ad.attribute": {
     "prefix": "ad.attribute",
-    "body": [
-      "ad.attribute(${1})"
-    ]
+    "body": ["ad.attribute(${1})"]
   },
   "ad.property": {
     "prefix": "ad.property",
-    "body": [
-      "ad.property(${1})"
-    ]
+    "body": ["ad.property(${1})"]
   },
   "ad.wxml": {
     "prefix": "ad.wxml",
-    "body": [
-      "ad.wxml()"
-    ]
+    "body": ["ad.wxml()"]
   },
   "ad.outerWxml": {
     "prefix": "ad.outerWxml",
-    "body": [
-      "ad.outerWxml()"
-    ]
+    "body": ["ad.outerWxml()"]
   },
   "ad.value": {
     "prefix": "ad.value",
-    "body": [
-      "ad.value()"
-    ]
+    "body": ["ad.value()"]
   },
   "ad.style": {
     "prefix": "ad.style",
-    "body": [
-      "ad.style(${1})"
-    ]
+    "body": ["ad.style(${1})"]
   },
   "ad.tap": {
     "prefix": "ad.tap",
-    "body": [
-      "ad.tap()"
-    ]
+    "body": ["ad.tap()"]
   },
   "ad.longpress": {
     "prefix": "ad.longpress",
-    "body": [
-      "ad.longpress()"
-    ]
+    "body": ["ad.longpress()"]
   },
   "ad.touchstart": {
     "prefix": "ad.touchstart",
@@ -4875,102 +3589,67 @@
   },
   "ad.touchend": {
     "prefix": "ad.touchend",
-    "body": [
-      "ad.touchend({",
-      "  touches: ${1}",
-      "  changedTouches: ${2}",
-      "})"
-    ]
+    "body": ["ad.touchend({", "  touches: ${1}", "  changedTouches: ${2}", "})"]
   },
   "ad.trigger": {
     "prefix": "ad.trigger",
-    "body": [
-      "ad.trigger(${1}, ${2})"
-    ]
+    "body": ["ad.trigger(${1}, ${2})"]
   },
   "officialAccount.tagName": {
     "prefix": "officialAccount.tagName",
-    "body": [
-      "officialAccount.tagName"
-    ]
+    "body": ["officialAccount.tagName"]
   },
   "officialAccount.$": {
     "prefix": "officialAccount.$",
-    "body": [
-      "officialAccount.$('${1}')"
-    ]
+    "body": ["officialAccount.$('${1}')"]
   },
   "officialAccount.$$": {
     "prefix": "officialAccount.$$",
-    "body": [
-      "officialAccount.$$('${1}')"
-    ]
+    "body": ["officialAccount.$$('${1}')"]
   },
   "officialAccount.size": {
     "prefix": "officialAccount.size",
-    "body": [
-      "officialAccount.size()"
-    ]
+    "body": ["officialAccount.size()"]
   },
   "officialAccount.offset": {
     "prefix": "officialAccount.offset",
-    "body": [
-      "officialAccount.offset()"
-    ]
+    "body": ["officialAccount.offset()"]
   },
   "officialAccount.text": {
     "prefix": "officialAccount.text",
-    "body": [
-      "officialAccount.text()"
-    ]
+    "body": ["officialAccount.text()"]
   },
   "officialAccount.attribute": {
     "prefix": "officialAccount.attribute",
-    "body": [
-      "officialAccount.attribute(${1})"
-    ]
+    "body": ["officialAccount.attribute(${1})"]
   },
   "officialAccount.property": {
     "prefix": "officialAccount.property",
-    "body": [
-      "officialAccount.property(${1})"
-    ]
+    "body": ["officialAccount.property(${1})"]
   },
   "officialAccount.wxml": {
     "prefix": "officialAccount.wxml",
-    "body": [
-      "officialAccount.wxml()"
-    ]
+    "body": ["officialAccount.wxml()"]
   },
   "officialAccount.outerWxml": {
     "prefix": "officialAccount.outerWxml",
-    "body": [
-      "officialAccount.outerWxml()"
-    ]
+    "body": ["officialAccount.outerWxml()"]
   },
   "officialAccount.value": {
     "prefix": "officialAccount.value",
-    "body": [
-      "officialAccount.value()"
-    ]
+    "body": ["officialAccount.value()"]
   },
   "officialAccount.style": {
     "prefix": "officialAccount.style",
-    "body": [
-      "officialAccount.style(${1})"
-    ]
+    "body": ["officialAccount.style(${1})"]
   },
   "officialAccount.tap": {
     "prefix": "officialAccount.tap",
-    "body": [
-      "officialAccount.tap()"
-    ]
+    "body": ["officialAccount.tap()"]
   },
   "officialAccount.longpress": {
     "prefix": "officialAccount.longpress",
-    "body": [
-      "officialAccount.longpress()"
-    ]
+    "body": ["officialAccount.longpress()"]
   },
   "officialAccount.touchstart": {
     "prefix": "officialAccount.touchstart",
@@ -5001,93 +3680,63 @@
   },
   "officialAccount.trigger": {
     "prefix": "officialAccount.trigger",
-    "body": [
-      "officialAccount.trigger(${1}, ${2})"
-    ]
+    "body": ["officialAccount.trigger(${1}, ${2})"]
   },
   "openData.tagName": {
     "prefix": "openData.tagName",
-    "body": [
-      "openData.tagName"
-    ]
+    "body": ["openData.tagName"]
   },
   "openData.$": {
     "prefix": "openData.$",
-    "body": [
-      "openData.$('${1}')"
-    ]
+    "body": ["openData.$('${1}')"]
   },
   "openData.$$": {
     "prefix": "openData.$$",
-    "body": [
-      "openData.$$('${1}')"
-    ]
+    "body": ["openData.$$('${1}')"]
   },
   "openData.size": {
     "prefix": "openData.size",
-    "body": [
-      "openData.size()"
-    ]
+    "body": ["openData.size()"]
   },
   "openData.offset": {
     "prefix": "openData.offset",
-    "body": [
-      "openData.offset()"
-    ]
+    "body": ["openData.offset()"]
   },
   "openData.text": {
     "prefix": "openData.text",
-    "body": [
-      "openData.text()"
-    ]
+    "body": ["openData.text()"]
   },
   "openData.attribute": {
     "prefix": "openData.attribute",
-    "body": [
-      "openData.attribute(${1})"
-    ]
+    "body": ["openData.attribute(${1})"]
   },
   "openData.property": {
     "prefix": "openData.property",
-    "body": [
-      "openData.property(${1})"
-    ]
+    "body": ["openData.property(${1})"]
   },
   "openData.wxml": {
     "prefix": "openData.wxml",
-    "body": [
-      "openData.wxml()"
-    ]
+    "body": ["openData.wxml()"]
   },
   "openData.outerWxml": {
     "prefix": "openData.outerWxml",
-    "body": [
-      "openData.outerWxml()"
-    ]
+    "body": ["openData.outerWxml()"]
   },
   "openData.value": {
     "prefix": "openData.value",
-    "body": [
-      "openData.value()"
-    ]
+    "body": ["openData.value()"]
   },
   "openData.style": {
     "prefix": "openData.style",
-    "body": [
-      "openData.style(${1})"
-    ]
+    "body": ["openData.style(${1})"]
   },
   "openData.tap": {
     "prefix": "openData.tap",
-    "body": [
-      "openData.tap()"
-    ]
+    "body": ["openData.tap()"]
   },
   "openData.longpress": {
     "prefix": "openData.longpress",
-    "body": [
-      "openData.longpress()"
-    ]
+    "body": ["openData.longpress()"]
   },
   "openData.touchstart": {
     "prefix": "openData.touchstart",
@@ -5118,93 +3767,63 @@
   },
   "openData.trigger": {
     "prefix": "openData.trigger",
-    "body": [
-      "openData.trigger(${1}, ${2})"
-    ]
+    "body": ["openData.trigger(${1}, ${2})"]
   },
   "customComponent.tagName": {
     "prefix": "customComponent.tagName",
-    "body": [
-      "customComponent.tagName"
-    ]
+    "body": ["customComponent.tagName"]
   },
   "customComponent.$": {
     "prefix": "customComponent.$",
-    "body": [
-      "customComponent.$('${1}')"
-    ]
+    "body": ["customComponent.$('${1}')"]
   },
   "customComponent.$$": {
     "prefix": "customComponent.$$",
-    "body": [
-      "customComponent.$$('${1}')"
-    ]
+    "body": ["customComponent.$$('${1}')"]
   },
   "customComponent.size": {
     "prefix": "customComponent.size",
-    "body": [
-      "customComponent.size()"
-    ]
+    "body": ["customComponent.size()"]
   },
   "customComponent.offset": {
     "prefix": "customComponent.offset",
-    "body": [
-      "customComponent.offset()"
-    ]
+    "body": ["customComponent.offset()"]
   },
   "customComponent.text": {
     "prefix": "customComponent.text",
-    "body": [
-      "customComponent.text()"
-    ]
+    "body": ["customComponent.text()"]
   },
   "customComponent.attribute": {
     "prefix": "customComponent.attribute",
-    "body": [
-      "customComponent.attribute(${1})"
-    ]
+    "body": ["customComponent.attribute(${1})"]
   },
   "customComponent.property": {
     "prefix": "customComponent.property",
-    "body": [
-      "customComponent.property(${1})"
-    ]
+    "body": ["customComponent.property(${1})"]
   },
   "customComponent.wxml": {
     "prefix": "customComponent.wxml",
-    "body": [
-      "customComponent.wxml()"
-    ]
+    "body": ["customComponent.wxml()"]
   },
   "customComponent.outerWxml": {
     "prefix": "customComponent.outerWxml",
-    "body": [
-      "customComponent.outerWxml()"
-    ]
+    "body": ["customComponent.outerWxml()"]
   },
   "customComponent.value": {
     "prefix": "customComponent.value",
-    "body": [
-      "customComponent.value()"
-    ]
+    "body": ["customComponent.value()"]
   },
   "customComponent.style": {
     "prefix": "customComponent.style",
-    "body": [
-      "customComponent.style(${1})"
-    ]
+    "body": ["customComponent.style(${1})"]
   },
   "customComponent.tap": {
     "prefix": "customComponent.tap",
-    "body": [
-      "customComponent.tap()"
-    ]
+    "body": ["customComponent.tap()"]
   },
   "customComponent.longpress": {
     "prefix": "customComponent.longpress",
-    "body": [
-      "customComponent.longpress()"
-    ]
+    "body": ["customComponent.longpress()"]
   },
   "customComponent.touchstart": {
     "prefix": "customComponent.touchstart",
@@ -5235,146 +3854,90 @@
   },
   "customComponent.trigger": {
     "prefix": "customComponent.trigger",
-    "body": [
-      "customComponent.trigger(${1}, ${2})"
-    ]
+    "body": ["customComponent.trigger(${1}, ${2})"]
   },
   "customComponent.callMethod": {
     "prefix": "customComponent.callMethod",
-    "body": [
-      "customComponent.callMethod('${1}', ${2})"
-    ]
+    "body": ["customComponent.callMethod('${1}', ${2})"]
   },
   "customComponent.data": {
     "prefix": "customComponent.data",
-    "body": [
-      "customComponent.data(${1})"
-    ]
+    "body": ["customComponent.data(${1})"]
   },
   "customComponent.setData": {
     "prefix": "customComponent.setData",
-    "body": [
-      "customComponent.setData(${1})"
-    ]
+    "body": ["customComponent.setData(${1})"]
   },
   "describe": {
     "prefix": "describe",
-    "body": [
-      "describe('${1}', () => {",
-      "  ${2}",
-      "});"
-    ]
+    "body": ["describe('${1}', () => {", "  ${2}", "});"]
   },
   "beforeAll": {
     "prefix": "beforeAll",
-    "body": [
-      "beforeAll(async () => {",
-      "  ${1}",
-      "}, ${2:timeout});"
-    ]
+    "body": ["beforeAll(async () => {", "  ${1}", "}, ${2:timeout});"]
   },
   "afterAll": {
     "prefix": "afterAll",
-    "body": [
-      "afterAll(async () => {",
-      "  ${1}",
-      "});"
-    ]
+    "body": ["afterAll(async () => {", "  ${1}", "});"]
   },
   "beforeEach": {
     "prefix": "beforeEach",
-    "body": [
-      "beforeEach(async () => {",
-      "  ${1}",
-      "}, ${2:timeout});"
-    ]
+    "body": ["beforeEach(async () => {", "  ${1}", "}, ${2:timeout});"]
   },
   "afterEach": {
     "prefix": "afterEach",
-    "body": [
-      "afterEach(async () => {",
-      "  ${1}",
-      "});"
-    ]
+    "body": ["afterEach(async () => {", "  ${1}", "});"]
   },
   "test": {
     "prefix": "test",
-    "body": [
-      "test('${1}', async () => {",
-      "  ${2}",
-      "}, ${3:timeout});"
-    ]
+    "body": ["test('${1}', async () => {", "  ${2}", "}, ${3:timeout});"]
   },
   "expect.toBe": {
     "prefix": "expect.toBe",
-    "body": [
-      "expect(${1}).toBe(${2});"
-    ]
+    "body": ["expect(${1}).toBe(${2});"]
   },
   "expect.not.toBe": {
     "prefix": "expect.not.toBe",
-    "body": [
-      "expect(${1}).not.toBe(${2});"
-    ]
+    "body": ["expect(${1}).not.toBe(${2});"]
   },
   "expect.toEqual": {
     "prefix": "expect.toEqual",
-    "body": [
-      "expect(${1}).toEqual(${2});"
-    ]
+    "body": ["expect(${1}).toEqual(${2});"]
   },
   "expect.not.toEqual": {
     "prefix": "expect.not.toEqual",
-    "body": [
-      "expect(${1}).not.toEqual(${2});"
-    ]
+    "body": ["expect(${1}).not.toEqual(${2});"]
   },
   "expect.toBeCloseTo": {
     "prefix": "expect.toBeCloseTo",
-    "body": [
-      "expect(${1}).toBeCloseTo(${2});"
-    ]
+    "body": ["expect(${1}).toBeCloseTo(${2});"]
   },
   "expect.toBeNull": {
     "prefix": "expect.toBeNull",
-    "body": [
-      "expect(${1}).toBeNull();"
-    ]
+    "body": ["expect(${1}).toBeNull();"]
   },
   "expect.not.toBeNull": {
     "prefix": "expect.not.toBeNull",
-    "body": [
-      "expect(${1}).not.toBeNull();"
-    ]
+    "body": ["expect(${1}).not.toBeNull();"]
   },
   "expect.toBeDefind": {
     "prefix": "expect.toBeDefined",
-    "body": [
-      "expect(${1}).toBeDefined();"
-    ]
+    "body": ["expect(${1}).toBeDefined();"]
   },
   "expect.toBeUndefined": {
     "prefix": "expect.toBeUndefined",
-    "body": [
-      "expect(${1}).toBeUndefined();"
-    ]
+    "body": ["expect(${1}).toBeUndefined();"]
   },
   "expect.toBeNaN": {
     "prefix": "expect.toBeNaN",
-    "body": [
-      "expect(${1}).toBeNaN();"
-    ]
+    "body": ["expect(${1}).toBeNaN();"]
   },
   "expect.toBeTruthy": {
     "prefix": "expect.toBeTruthy",
-    "body": [
-      "expect(${1}).toBeTruthy();"
-    ]
+    "body": ["expect(${1}).toBeTruthy();"]
   },
   "expect.toBeFalsy": {
     "prefix": "expect.toBeFalsy",
-    "body": [
-      "expect(${1}).toBeFalsy();"
-    ]
+    "body": ["expect(${1}).toBeFalsy();"]
   }
 }
