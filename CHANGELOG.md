@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.1] - 2020-5-5
+
+### Changed
+
+- 更新 snippets
+
 ## [0.1.0] - 2020-4-27
 
 ### Changed
