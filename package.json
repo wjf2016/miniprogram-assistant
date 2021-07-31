@@ -13,8 +13,14 @@
     "onCommand:miniprogramAssistant.formatWxml",
     "onCommand:miniprogramAssistant.createPage",
     "onCommand:miniprogramAssistant.createComponent",
+    "onCommand:miniprogramAssistant.toLowerCase",
+    "onCommand:miniprogramAssistant.toUppercase",
     "onCommand:miniprogramAssistant.toCamelCase",
-    "onCommand:miniprogramAssistant.toUnderline"
+    "onCommand:miniprogramAssistant.toCamelCaseUppercase",
+    "onCommand:miniprogramAssistant.toUnderline",
+    "onCommand:miniprogramAssistant.toUnderlineUppercase",
+    "onCommand:miniprogramAssistant.toThroughLine",
+    "onCommand:miniprogramAssistant.toThroughLineUppercase"
   ],
   "author": {
     "email": "wujianfu@foxmail.com",
@@ -70,13 +76,43 @@
       },
       {
         "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.toLowerCase",
+        "title": "转为小写"
+      },
+      {
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.toUppercase",
+        "title": "转为大写"
+      },
+      {
+        "category": "miniprogramAssistant",
         "command": "miniprogramAssistant.toCamelCase",
-        "title": "转为驼峰命名"
+        "title": "转为小驼峰命名"
+      },
+      {
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.toCamelCaseUppercase",
+        "title": "转为大驼峰命名"
       },
       {
         "category": "miniprogramAssistant",
         "command": "miniprogramAssistant.toUnderline",
-        "title": "转为下划线命名"
+        "title": "转为小写下划线命名"
+      },
+      {
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.toUnderlineUppercase",
+        "title": "转为大写下划线命名"
+      },
+      {
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.toThroughLine",
+        "title": "转为小写中划线命名"
+      },
+      {
+        "category": "miniprogramAssistant",
+        "command": "miniprogramAssistant.toThroughLineUppercase",
+        "title": "转为大写中划线命名"
       }
     ],
     "configuration": {
@@ -415,11 +451,35 @@
           "when": "editorLangId == wxml"
         },
         {
+          "command": "miniprogramAssistant.toLowerCase",
+          "group": "navigation"
+        },
+        {
+          "command": "miniprogramAssistant.toUppercase",
+          "group": "navigation"
+        },
+        {
           "command": "miniprogramAssistant.toCamelCase",
           "group": "navigation"
         },
         {
+          "command": "miniprogramAssistant.toCamelCaseUppercase",
+          "group": "navigation"
+        },
+        {
           "command": "miniprogramAssistant.toUnderline",
+          "group": "navigation"
+        },
+        {
+          "command": "miniprogramAssistant.toUnderlineUppercase",
+          "group": "navigation"
+        },
+        {
+          "command": "miniprogramAssistant.toThroughLine",
+          "group": "navigation"
+        },
+        {
+          "command": "miniprogramAssistant.toThroughLineUppercase",
           "group": "navigation"
         }
       ],
@@ -482,5 +542,5 @@
   "publisher": "wjf",
   "repository": "https://github.com/wjf2016/miniprogram-assistant",
   "scripts": {},
-  "version": "0.1.3"
+  "version": "0.1.4"
 }
