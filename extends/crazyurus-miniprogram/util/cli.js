@@ -86,13 +86,11 @@ function activate(context) {
       return
     }
 
-    const miniprogramProjectName = decodeURIComponent(projectConfig.projectname)
-    const rootPath = getRootPath()
-    const vscodeProjectName = path.basename(rootPath)
+    const projectName = decodeURIComponent(projectConfig.projectname)
     const command = `"${path.join(
       path.dirname(__filename),
       '../bin/miniprogram-compile.exe',
-    )}" {miniprogramProjectName="${miniprogramProjectName}";vscodeProjectName="${vscodeProjectName}"}`
+    )}" -projectName "${projectName} - 微信开发者工具"`
 
     exec(command, (error, stdout, stderr) => {
       if (error) {
