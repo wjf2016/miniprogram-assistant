@@ -90,7 +90,7 @@ function activate(context) {
     const command = `"${path.join(
       path.dirname(__filename),
       '../bin/miniprogram-compile.exe',
-    )}" -projectName "${projectName} - 微信开发者工具"`
+    )}" -prefix "${projectName}"`
 
     exec(command, (error, stdout, stderr) => {
       if (error) {
