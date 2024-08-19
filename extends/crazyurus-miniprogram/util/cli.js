@@ -86,11 +86,10 @@ function activate(context) {
       return
     }
 
-    const projectName = decodeURIComponent(projectConfig.projectname)
     const command = `"${path.join(
       path.dirname(__filename),
       '../bin/miniprogram-compile.exe',
-    )}" -prefix "${projectName}"`
+    )}"`
 
     exec(command, (error, stdout, stderr) => {
       if (error) {
